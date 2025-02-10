@@ -11,28 +11,25 @@ class Solution {
         }
         if(!stack.isEmpty()){
             if(s.charAt(i)=='}' && stack.peek()!='{'){
-            return false;
-        }else if(s.charAt(i)=='}' && stack.peek()=='{'){
-            stack.pop();
-        }
-        if(s.charAt(i)==']' && stack.peek()!='['){
-            return false;
-        }else if(s.charAt(i)==']' && stack.peek()=='['){
-            stack.pop();
-        }
-        if(s.charAt(i)==')' && stack.peek()!='('){
-            return false;
-        }else if(s.charAt(i)==')' && stack.peek()=='('){
-            stack.pop();
-        }
+                return false;
+            }else if(s.charAt(i)=='}' && stack.peek()=='{'){
+                stack.pop();
+            }
+            if(s.charAt(i)==']' && stack.peek()!='['){
+                return false;
+            }else if(s.charAt(i)==']' && stack.peek()=='['){
+                stack.pop();
+            }
+            if(s.charAt(i)==')' && stack.peek()!='('){
+                return false;
+            }else if(s.charAt(i)==')' && stack.peek()=='('){
+                stack.pop();
+            }
 
         }else{
             return false;
         }
        }
-       if(stack.isEmpty()){
-        return true;
-       }
-       return false;
+       return stack.isEmpty();
     }
 }
