@@ -9,7 +9,8 @@ class Solution {
             stack.push(s.charAt(i));
             continue;
         }
-        if(s.charAt(i)=='}' && stack.peek()!='{'){
+        if(!stack.isEmpty()){
+            if(s.charAt(i)=='}' && stack.peek()!='{'){
             return false;
         }else if(s.charAt(i)=='}' && stack.peek()=='{'){
             stack.pop();
@@ -23,6 +24,10 @@ class Solution {
             return false;
         }else if(s.charAt(i)==')' && stack.peek()=='('){
             stack.pop();
+        }
+
+        }else{
+            return false;
         }
        }
        if(stack.isEmpty()){
