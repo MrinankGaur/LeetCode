@@ -1,7 +1,7 @@
 import java.math.*;
 class Solution {
      public List<Integer> addToArrayForm(int[] A, int K) {
-        ArrayList<Integer> res = new ArrayList<>();
+        List<Integer> res = new LinkedList<>();
         for (int i = A.length - 1; i >= 0; --i) {
             res.add(0, (A[i] + K) % 10);
             K = (A[i] + K) / 10;
