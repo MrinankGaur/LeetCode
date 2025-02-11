@@ -1,26 +1,15 @@
 import java.math.*;
 class Solution {
-    public List<Integer> addToArrayForm(int[] num, int k) {
-        BigInteger sum = 0;
-        for(int i:num){
-            sum = sum*10 + i;
+     public List<Integer> addToArrayForm(int[] A, int K) {
+        ArrayList<Integer> res = new ArrayList<>();
+        for (int i = A.length - 1; i >= 0; --i) {
+            res.add(0, (A[i] + K) % 10);
+            K = (A[i] + K) / 10;
         }
-        System.out.println(sum);
-        sum+=k;
-        System.out.println(sum);
-        Stack<Integer> stack = new Stack<>();
-        ArrayList<Integer> ans = new ArrayList<Integer>();        
-        while(sum>0){
-            long digit =sum%10;
-            System.out.println(digit);
-            stack.push((int)digit);
-            sum/=10;
+        while (K > 0) {
+            res.add(0, K % 10);
+            K /= 10;
         }
-        while(!stack.isEmpty()){
-            ans.add((int)stack.pop());
-        }
-       
-       
-        return ans;
+        return res;
     }
 }
