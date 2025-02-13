@@ -10,6 +10,7 @@ class Solution {
                 arr[i]=nums[s++];
             }
         }
+        System.gc();
         return arr;
     }
 }
