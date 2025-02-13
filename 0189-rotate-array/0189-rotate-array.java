@@ -21,5 +21,6 @@ class Solution {
             nums[nums.length-1-j]=temp;
             j++;    
         }
+        System.gc();
     }
 }
