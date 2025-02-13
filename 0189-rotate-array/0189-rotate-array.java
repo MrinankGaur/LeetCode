@@ -1,6 +1,6 @@
 class Solution {
     public void rotate(int[] nums, int k) {
-         k = k%nums.length;
+        k = k%nums.length;
         if(nums.length==1){
             return;
         }
@@ -21,6 +21,5 @@ class Solution {
             nums[nums.length-1-j]=temp;
             j++;    
         }
-        System.gc();
     }
 }
