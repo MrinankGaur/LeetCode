@@ -9,11 +9,13 @@ class Solution {
             nums[nums.length-1-i]=nums[i]^nums[nums.length-1-i];
             nums[i]=nums[i]^nums[nums.length-1-i];
         }
+        System.out.println(Arrays.toString(nums));
         for(int i = 0;i<k/2;i++){
             int temp = nums[i];
             nums[i]=nums[k-1-i];
             nums[k-1-i]=temp;    
         }
+        System.out.println(Arrays.toString(nums));
         int j = 0;
         for(int i = k;i<(nums.length+k)/2;i++){
             int temp = nums[i];
