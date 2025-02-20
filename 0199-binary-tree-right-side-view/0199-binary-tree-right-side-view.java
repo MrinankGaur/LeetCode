@@ -23,10 +23,10 @@ class Solution {
         queue.offer(root);
         while(!queue.isEmpty()){
             int levelSize = queue.size();
-            List<Integer> list = new ArrayList<>();
+            int x = 0;
             for(int i = 0;i<levelSize;i++){
                 TreeNode currentNode = queue.poll();
-                list.add(currentNode.val);
+                x=currentNode.val;
                 if(currentNode.left != null){
                     queue.offer(currentNode.left);
                 }
@@ -34,7 +34,7 @@ class Solution {
                     queue.offer(currentNode.right);
                 }
             }
-            ans.add(list.getLast());
+            ans.add(x);
         }
         return ans;
 
