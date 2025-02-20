@@ -36,6 +36,7 @@ class Solution {
             }
             ans.add(x);
         }
+        System.gc();
         return ans;
 
     }
