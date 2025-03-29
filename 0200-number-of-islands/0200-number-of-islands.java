@@ -1,40 +1,47 @@
 class Solution {
+    static char[][] global;
     public int numIslands(char[][] grid) {
-        int islands = 0;
-        int rows = grid.length;
-        int cols = grid[0].length;
-        Set<String> visited = new HashSet<>();
-
-        int[][] directions = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-
-        for (int r = 0; r < rows; r++) {
-            for (int c = 0; c < cols; c++) {
-                if (grid[r][c] == '1' && !visited.contains(r + "," + c)) {
-                    islands++;
-                    bfs(grid, r, c, visited, directions, rows, cols);
+        int res = 0;
+        global = grid;
+        for(int i = 0;i < grid.length;i++){
+            for(int j = 0;j < grid[0].length;j++){
+                if(grid[i][j] == 'x' || grid[i][j] == '0'){
+                    continue;
+                }
+                else{
+                    res++;
+                    findOne(i,j);
                 }
             }
         }
-
-        return islands;        
+        return res;
     }
 
-    private void bfs(char[][] grid, int r, int c, Set<String> visited, int[][] directions, int rows, int cols) {
-        Queue<int[]> q = new LinkedList<>();
-        visited.add(r + "," + c);
-        q.add(new int[]{r, c});
-
-        while (!q.isEmpty()) {
-            int[] point = q.poll();
-            int row = point[0], col = point[1];
-
-            for (int[] direction : directions) {
-                int nr = row + direction[0], nc = col + direction[1];
-                if (nr >= 0 && nr < rows && nc >= 0 && nc < cols && grid[nr][nc] == '1' && !visited.contains(nr + "," + nc)) {
-                    q.add(new int[]{nr, nc});
-                    visited.add(nr + "," + nc);
-                }
+    public void findOne(int row, int col){
+        global[row][col] = 'x';
+        if(row < global.length - 1){
+            //move bot
+            if(global[row + 1][col] != 'x' && global[row + 1][col] != '0'){
+                findOne(row + 1,col);
             }
         }
-    }    
+        if(row > 0){
+            //move top
+            if(global[row - 1][col] != 'x' && global[row - 1][col] != '0'){
+                findOne(row - 1,col);
+            }
+        }
+        if(col < global[0].length - 1){
+            //move right
+            if(global[row][col + 1] != 'x' && global[row][col + 1] != '0'){
+                findOne(row,col + 1);
+            }
+        }
+        if(col > 0){
+            //move left
+            if(global[row][col - 1] != 'x' && global[row][col - 1] != '0'){
+                findOne(row,col - 1);
+            }
+        }
+    }
 }
