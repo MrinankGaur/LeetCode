@@ -1,47 +1,31 @@
 class Solution {
-    static char[][] global;
+    int rows, cols, islands = 0;
+
     public int numIslands(char[][] grid) {
-        int res = 0;
-        global = grid;
-        for(int i = 0;i < grid.length;i++){
-            for(int j = 0;j < grid[0].length;j++){
-                if(grid[i][j] == 'x' || grid[i][j] == '0'){
-                    continue;
-                }
-                else{
-                    res++;
-                    findOne(i,j);
-                }
-            }
-        }
-        return res;
+        rows = grid.length;
+        cols = grid[0].length;
+        for (int row = 0; row < rows; row++)
+            check(grid, row);
+        return islands;
     }
 
-    public void findOne(int row, int col){
-        global[row][col] = 'x';
-        if(row < global.length - 1){
-            //move bot
-            if(global[row + 1][col] != 'x' && global[row + 1][col] != '0'){
-                findOne(row + 1,col);
+    public void check(final char[][] grid, int row) {
+        final char[] finalRow = grid[row];
+        for (int col = 0; col < cols; ++col)
+            if (finalRow[col] == '1') {
+                bfs(grid, row, col);
+                ++islands;
             }
-        }
-        if(row > 0){
-            //move top
-            if(global[row - 1][col] != 'x' && global[row - 1][col] != '0'){
-                findOne(row - 1,col);
-            }
-        }
-        if(col < global[0].length - 1){
-            //move right
-            if(global[row][col + 1] != 'x' && global[row][col + 1] != '0'){
-                findOne(row,col + 1);
-            }
-        }
-        if(col > 0){
-            //move left
-            if(global[row][col - 1] != 'x' && global[row][col - 1] != '0'){
-                findOne(row,col - 1);
-            }
-        }
     }
-}
+
+    public void bfs(char[][] grid, int row, int col) {
+        grid[row][col] = '*';
+        if (row > 0 && grid[row - 1][col] == '1')
+            bfs(grid, row - 1, col);
+        if (row + 1 < rows && grid[row + 1][col] == '1')
+            bfs(grid, row + 1, col);
+        if (col > 0 && grid[row][col - 1] == '1')
+            bfs(grid, row, col - 1);
+        if (col + 1 < cols && grid[row][col + 1] == '1')
+            bfs(grid, row, col + 1);
+    }
