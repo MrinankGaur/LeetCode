@@ -16,19 +16,16 @@ class Solution {
 		}
 
 		for(int i = 0;i<n;i++) {
-			// check for unvisited Os in the boundary columns
-			// first column
+
 			if(vis[i][0] == 0 && mat[i][0] == 'O') {
 				dfs(i, 0, vis, mat, delrow, delcol);
 			}
 
-			// last column
+
 			if(vis[i][m-1] == 0 && mat[i][m-1] == 'O') {
 				dfs(i, m-1, vis, mat, delrow, delcol);
 			}
 		}
-
-		// if unvisited O then convert to X
 		for(int i = 0;i<n;i++) {
 			for(int j= 0 ;j<m;j++) {
 				if(vis[i][j] == 0 && mat[i][j] == 'O')
@@ -41,11 +38,10 @@ class Solution {
 		int n = mat.length;
 		int m = mat[0].length;
 
-		// check for top, right, bottom, left
 		for(int i = 0;i<4;i++) {
 			int nrow = row + delrow[i];
 			int ncol = col + delcol[i];
-			// check for valid coordinates and unvisited Os
+
 			if(nrow >=0 && nrow <n && ncol >= 0 && ncol < m && vis[nrow][ncol] == 0 && mat[nrow][ncol] == 'O') {
 				dfs(nrow, ncol, vis, mat, delrow, delcol);
 			}
