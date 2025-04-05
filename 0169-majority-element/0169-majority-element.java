@@ -1,26 +1,25 @@
 class Solution {
-    public int majorityElement(int[] v) {
-        int n = v.length;
-        int cnt = 0; // count
-        int el = 0; // Element
+    public int majorityElement(int[] nums) {
+        int count = 0, candidate = 0;
 
-        //applying the algorithm:
-        for (int i = 0; i < n; i++) {
-            if (cnt == 0) {
-                cnt = 1;
-                el = v[i];
-            } else if (el == v[i]) cnt++;
-            else cnt--;
+        // Step 1: Find potential candidate
+        for (int num : nums) {
+            if (count == 0) {
+                candidate = num;
+                count = 1;
+            } else if (num == candidate) {
+                count++;
+            } else {
+                count--;
+            }
         }
 
-        //checking if the stored element
-        // is the majority element:
-        int cnt1 = 0;
-        for (int i = 0; i < n; i++) {
-            if (v[i] == el) cnt1++;
+        // Step 2: Verify candidate
+        count = 0;
+        for (int num : nums) {
+            if (num == candidate) count++;
         }
 
-        if (cnt1 > (n / 2)) return el;
-        return -1; 
+        return (count > nums.length / 2) ? candidate : -1;
     }
 }
