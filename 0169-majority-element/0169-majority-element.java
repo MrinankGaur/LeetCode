@@ -14,7 +14,6 @@ class Solution {
             } else {
                 count--;
             }
-            System.out.println("cand: "+candidate+" count: "+ count);
         }
 
         // Step 2: Verify candidate
