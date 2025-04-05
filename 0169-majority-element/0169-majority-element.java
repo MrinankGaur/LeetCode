@@ -6,12 +6,15 @@ class Solution {
         for (int num : nums) {
             if (count == 0) {
                 candidate = num;
+                
                 count = 1;
+                
             } else if (num == candidate) {
                 count++;
             } else {
                 count--;
             }
+            System.out.println("cand: "+candidate+" count: "+ count);
         }
 
         // Step 2: Verify candidate
