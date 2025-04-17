@@ -1,38 +1,44 @@
 class Solution {
     public int shortestPathBinaryMatrix(int[][] grid) {
-        int row = grid.length;
-        int col = grid[0].length;
-
-        if(grid==null || row == 0 || col ==0 || grid[0][0]==1 || grid[row-1][col-1]==1) return -1;
-        int ans = 0;
-
-        int[][] dirs = {{-1,-1},{-1,0},{-1,1},{0,-1},{0,1},{1,-1},{1,0},{1,1}};
-        boolean[][] visited = new boolean[row][col];
-        
-        Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[]{0,0});
-        visited[0][0]= true;
-
-        while(!q.isEmpty()){
-            int size = q.size();
-            ans++;
-            for(int i = 0;i<size;i++){
-                int[] currPos = q.poll();
-                if(currPos[0]==row-1 && currPos[1]==col-1){
-                    return ans;
-                }
-                for(int[] dir: dirs){
-                    int nx = currPos[0] + dir[0];
-                    int ny = currPos[1] + dir[1];
-                    if(nx<0 || ny<0 || nx>=row || ny >= col || visited[nx][ny] || grid[nx][ny]==1){
-                        continue;
-                    }
-                    visited[nx][ny]= true;
-                    q.offer(new int[]{nx,ny});
-                }
-            }
-        }
+      int[][] directions={{-1,-1},{-1,0},{-1,1},{0,-1},{0,1},{1,-1},{1,0},{1,1}};
+      int m=grid.length;
+      int n=grid[0].length;
+      if(grid[0][0]!=0 || grid[m-1][n-1]!=0)
+      {
         return -1;
-    
+      }
+      Queue<int[]> queue=new LinkedList<>();
+      queue.add(new int[]{0,0,1});
+      grid[0][0]=1;
+      while(!queue.isEmpty())
+      {
+         int[] current=queue.poll();
+         int row=current[0];
+         int col=current[1];
+         int distance=current[2];
+         if(row==m-1 && col==n-1)
+         {
+            return distance;
+         }
+         for(int[] direction:directions)
+         {
+            int newrow=row+direction[0];
+            int newcol=col+direction[1];
+            if(isValid(m,n,newrow,newcol,grid))
+            {
+                queue.add(new int[]{newrow,newcol,distance+1});
+                grid[newrow][newcol]=1;
+            }
+         }
+      }
+      return -1;
+    }
+    public static boolean isValid(int m,int n,int row,int col,int[][] grid)
+    {
+        if(row<0 || row>=m || col<0 || col>=n || grid[row][col]==1)
+        {
+            return false;
+        }
+        return true;
     }
 }
