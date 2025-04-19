@@ -23,8 +23,7 @@ class Solution {
         }
 
         temp.next = head;
-        k = k % length;
-        k = length - k;
+        k = length-(k % length);
 
         while (k-- > 0) {
             temp = temp.next;
