@@ -1,6 +1,3 @@
-import java.util.PriorityQueue;
-import java.util.Comparator;
-
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -11,42 +8,32 @@ import java.util.Comparator;
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-
+import java.util.List;
 class Solution {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        if (l1 == null) return l2;
+        if (l2 == null) return l1;
+
+        if (l1.val < l2.val) {
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = mergeTwoLists(l1, l2.next);
+            return l2;
+        }
+    }
+
     public ListNode mergeKLists(ListNode[] lists) {
-        if (lists == null || lists.length == 0) {
-            return null;
-        }
+        if (lists.length == 0) return null;
+        return divideAndConquer(lists, 0, lists.length - 1);
+    }
 
-        // Min-heap based on ListNode's val
-        PriorityQueue<ListNode> minHeap = new PriorityQueue<>(lists.length, 
-            new Comparator<ListNode>() {
-                public int compare(ListNode a, ListNode b) {
-                    return a.val - b.val;
-                }
-            });
+    private ListNode divideAndConquer(ListNode[] lists, int left, int right) {
+        if (left == right) return lists[left];
 
-        // Add the first node of each list to the heap
-        for (ListNode node : lists) {
-            if (node != null) {
-                minHeap.offer(node);
-            }
-        }
-
-        ListNode dummy = new ListNode(0);
-        ListNode current = dummy;
-
-        while (!minHeap.isEmpty()) {
-            ListNode smallest = minHeap.poll();
-            current.next = smallest;
-            current = current.next;
-
-            // Push the next node from the same list into the heap
-            if (smallest.next != null) {
-                minHeap.offer(smallest.next);
-            }
-        }
-
-        return dummy.next;
+        int mid = left + (right - left) / 2;
+        ListNode l1 = divideAndConquer(lists, left, mid);
+        ListNode l2 = divideAndConquer(lists, mid + 1, right);
+        return mergeTwoLists(l1, l2);
     }
 }
