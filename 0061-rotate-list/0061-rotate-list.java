@@ -26,9 +26,8 @@ class Solution {
         k = k % length;
         k = length - k;
 
-        while (k > 0) {
+        while (k-- > 0) {
             temp = temp.next;
-            k--;
         }
 
         head = temp.next;
