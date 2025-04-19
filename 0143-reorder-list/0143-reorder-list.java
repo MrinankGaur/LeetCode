@@ -9,42 +9,28 @@
  * }
  */
 class Solution {
-    
+    static int[] arr = new int[1000000];
     public void reorderList(ListNode head) {
-       ListNode mid = getMid(head);
-       ListNode newhead = mid.next;
-       mid.next = null;
-       ListNode head2 = reverse(newhead);
-       ListNode temp = head;
-       
-       while(temp!=null && head2!=null){
-            ListNode tempNext = temp.next;   
-            ListNode head2Next = head2.next;
-            temp.next = head2;              
-            head2.next = tempNext;          
-            temp = tempNext;               
-            head2 = head2Next;
+        int n = 0;
+        ListNode temp = head;
+        while(temp!=null){
+            arr[n++]=temp.val;
+            temp=temp.next;
         }
-    }
-    
-    public ListNode getMid(ListNode head){
-        ListNode slow = head;
-        ListNode fast = head;
-        while(fast!= null && fast.next!=null){
-            slow = slow.next;
-            fast = fast.next.next;
+        ListNode x = head;
+        int i = 1;
+        int j = n-1;
+        for(int k = 1;k<n;k++){
+            if(k%2==0){
+                ListNode y = new ListNode(arr[i++]);
+                x.next = y;
+                x = x.next;
+            }
+            else{
+                ListNode y = new ListNode(arr[j--]);
+                x.next = y;
+                x = x.next;
+            }
         }
-        return slow;
-    }
-    public ListNode reverse(ListNode head){
-        ListNode prev = null;
-        ListNode curr = head;
-        while(curr!=null){
-            ListNode next = curr.next;
-            curr.next= prev;
-            prev = curr;
-            curr = next;
-        }
-        return prev;
     }
 }
