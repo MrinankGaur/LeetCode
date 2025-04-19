@@ -17,7 +17,7 @@ class Solution {
             f=f.next.next;
         }
         ListNode headSecond = reverseList(s);
-        while(head!=null && headSecond!=null){
+        while(headSecond!=null){
            if(head.val != headSecond.val){
                return false;
            }
@@ -26,7 +26,7 @@ class Solution {
         }
         return true;
     }
-    public ListNode reverseList(ListNode head) {
+    public ListNode reverseList1(ListNode head) {
         if (head == null) {
             return head;
         }
@@ -43,5 +43,17 @@ class Solution {
             }
         }
         return prev;
+    }
+    public ListNode reverseList(ListNode head){
+        if(head==null)return head;
+        ListNode prev = null;
+        ListNode curr = head;
+        while(curr!=null){
+            ListNode temp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = temp;
+        }
+        return curr;
     }
 }
