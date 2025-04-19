@@ -12,7 +12,6 @@ class Solution {
     public boolean isPalindrome(ListNode head) {
          ListNode mid = middleNode(head);
          ListNode headSecond = reverseList(mid);
-         ListNode rereverseHead = headSecond;
          while(head!=null && headSecond!=null){
             if(head.val != headSecond.val){
                 return false;
