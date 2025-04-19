@@ -54,6 +54,6 @@ class Solution {
             prev = curr;
             curr = temp;
         }
-        return curr;
+        return prev;
     }
 }
