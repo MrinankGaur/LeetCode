@@ -9,30 +9,60 @@
  * }
  */
 class Solution {
-    static int[] arr = new int[100000];
     public void reorderList(ListNode head) {
-        int n = 0;
-        ListNode temp = head;
-        while(temp!=null){
-            arr[n++]=temp.val;
-            temp = temp.next;
+        if(head == null || head.next == null){
+            return;
         }
-        ListNode x = head;
-        int j = 1;
-        int k = n-1;
-        for(int i = 1;i<n;i++){
-            if(i%2!=0){
-                ListNode y = new ListNode(arr[k]);
-                x.next = y;
-                x = x.next;
-                k--;
-            }
-            else{
-                ListNode y = new ListNode(arr[j]);
-                x.next = y;
-                x=x.next;
-                j++;
-            }
-        }
+
+        ListNode mid = findMid(head);
+        ListNode next = mid.next;
+        mid.next = null; 
+
+        ListNode head2 = reverse(next);
+        merge(head,head2);
+
     }
+
+    private static void merge(ListNode head1, ListNode head2){
+        //int flag = 0;
+        while(head1 != null && head2 != null){
+            ListNode next1 = head1.next;
+            ListNode next2 = head2.next;
+            
+            head1.next = head2;
+            head1 = next1;
+            if(next1 != null){
+                head2.next = next1;
+                head2 = next2;
+            }
+            
+        }
+        
+    }
+
+    private static ListNode reverse(ListNode head){
+        if(head.next == null){
+            return head;
+        }
+        ListNode next = head.next;
+        ListNode newHead = reverse(next);
+
+        
+        next.next = head;
+        head.next = null;
+        return newHead;
+    }
+
+    private static ListNode findMid(ListNode head){
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while(fast.next != null && fast.next.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+
 }
