@@ -16,14 +16,16 @@ class Solution {
                 extraEdges++;
             }
         }
-        for(int i =0;i<ds.parent.size();i++){
-            if(ds.findUParent(i)==i){
-                nc++;
-            }
+         Set<Integer> uniqueParents = new HashSet<>();
+        for (int i = 0; i < n; i++) {
+            uniqueParents.add(ds.findUParent(i));
         }
-        int ans = nc-1;
-        if(ans>=extraEdges)return ans;
-        return -1;
+
+        int components = uniqueParents.size();
+        int required = components - 1;
+
+        return extraEdges >= required ? required : -1;
+        
     }
 }
 public class DisjointSet {
