@@ -1,20 +1,17 @@
 class Solution {
-    int[] memo;
-    public int rob(int[] nums) {
-        memo = new int[nums.length + 1];
-        Arrays.fill(memo, -1);
-        return rob(nums, nums.length - 1);
-    }
-
-    private int rob(int[] nums, int i) {
-        if (i < 0) {
-            return 0;
+    public int rob(int[] num) {
+        int n = num.length;
+        if(n==0){
+            return num[0];
         }
-        if (memo[i] != -1) {
-            return memo[i];
+        int[] dp = new int[n];
+        dp[0]=num[0];
+        dp[1] = Math.max(num[0],num[1]);
+         for(int i=2;i<n;i++){
+            int take = num[i]+dp[i-2];
+            int notTake = 0 + dp[i-1];
+            dp[i]=Math.max(take,notTake);
         }
-        int left = rob(nums,i-2)+ nums[i];
-        int right = rob(nums,i-1);
-        return memo[i]=Math.max(left,right);
+        return dp[n-1];
     }
 }
