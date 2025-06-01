@@ -13,8 +13,8 @@ class Solution {
         if (memo[i] != -1) {
             return memo[i];
         }
-        int result = Math.max(rob(nums, i - 2) + nums[i], rob(nums, i - 1));
-        memo[i] = result;
-        return result;
+        int left = rob(nums,i-2)+ nums[i];
+        int right = rob(nums,i-1);
+        return memo[i]=Math.max(left,right);
     }
 }
