@@ -10,7 +10,7 @@ class Solution {
         if (i < 0) {
             return 0;
         }
-        if (memo[i] >= 0) {
+        if (memo[i] != -1) {
             return memo[i];
         }
         int result = Math.max(rob(nums, i - 2) + nums[i], rob(nums, i - 1));
