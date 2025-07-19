@@ -1,28 +1,34 @@
 class Solution {
-    public int longestCommonSubsequence(String text1, String text2) {
-        int n1 = text1.length();
-        int n2 = text2.length();
-        int[][] dp = new int[n1+1][n2+1];
-        for(int[] row:dp){
-            for(int i = 0;i<=n2;i++){
-                row[i] = -1;
-            }
-        }
-        return helper(n1,n2,text1,text2,dp);
-        // for(int i = 0;i<n2;i++){
-        //     if(text1.charAt(0)==text2.charAt(i)){
-        //         dp[0][i] = 1;
-        //     }
+    public int longestCommonSubsequence(String s1, String s2) {
+        int n = s1.length();
+        int m = s2.length();
+        // int[][] dp = new int[n+1][m+1];
+        // for(int[] row:dp){
+        //     Arrays.fill(row,-1);
         // }
-    }
-    public int helper(int index1, int index2,String text1, String text2,int[][] dp){
-        if(index1 == 0 || index2 == 0)
-            return 0;
-        if(dp[index1][index2]!=-1)
-            return dp[index1][index2];
-        if(text1.charAt(index1-1)==text2.charAt(index2-1)){
-            return dp[index1][index2] = 1 + helper(index1-1,index2-1,text1,text2,dp);
+        // return f(n,m,s1,s2,dp);
+        int[] prev = new int[m+1];
+        int[] curr = new int[m+1];
+        for(int i = 1;i<=n;i++){
+            for(int j = 1;j<=m;j++){
+                if(s1.charAt(i-1)==s2.charAt(j-1)){
+                    curr[j] = 1 + prev[j-1];
+                }else{
+                    curr[j]=Math.max(prev[j],curr[j-1]);
+                }
+            }
+            prev = curr.clone();
         }
-        return dp[index1][index2] = Math.max(helper(index1,index2-1,text1,text2,dp),helper(index1-1,index2,text1,text2,dp));
+        return prev[m];
+    }
+    public int f(int i,int j,String s1,String s2,int[][]dp){
+        if(i==0 || j==0){
+            return 0;
+        }
+        if(dp[i][j]!=-1) return dp[i][j];
+        if(s1.charAt(i-1)==s2.charAt(j-1)){
+            return dp[i][j] = 1 + f(i-1,j-1,s1,s2,dp);
+        }
+        return dp[i][j]=Math.max(f(i-1,j,s1,s2,dp),f(i,j-1,s1,s2,dp));
     }
 }
