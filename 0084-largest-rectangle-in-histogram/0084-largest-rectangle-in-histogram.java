@@ -1,33 +1,30 @@
 class Solution {
-     public int largestRectangleArea(int[] heights) {
-    Stack<Integer> stack = new Stack<>();
-    int max = 0;
+    public int largestRectangleArea(int[] arr) {
+        int n = arr.length;
+        Stack<Integer> st = new Stack<>();
+        int maxArea = 0;
 
-    stack.push(0);
+        for (int i = 0; i < n; i++) {
+            while (!st.isEmpty() && arr[st.peek()] > arr[i]) {
+                int heightIndex = st.pop();
+                int height = arr[heightIndex];
+                int rightBoundary = i;
+                int leftBoundary = st.isEmpty() ? -1 : st.peek();
+                int width = rightBoundary - leftBoundary - 1;
+                maxArea = Math.max(maxArea, height * width);
+            }
+            st.push(i);
+        }
 
-    for (int i = 1; i < heights.length; i++) {
-      while (!stack.isEmpty() && heights[i] < heights[stack.peek()]) {
-        max = getMax(heights, stack, max, i);
-      }
-      stack.push(i);
+        while (!st.isEmpty()) {
+            int heightIndex = st.pop();
+            int height = arr[heightIndex];
+            int rightBoundary = n;
+            int leftBoundary = st.isEmpty() ? -1 : st.peek();
+            int width = rightBoundary - leftBoundary - 1;
+            maxArea = Math.max(maxArea, height * width);
+        }
+
+        return maxArea;
     }
-
-    int i = heights.length;
-    while (!stack.isEmpty()) {
-      max = getMax(heights, stack, max, i);
-    }
-
-    return max;
-  }
-
-  private static int getMax(int[] arr, Stack<Integer> stack, int max, int i) {
-    int area;
-    int popped = stack.pop();
-    if (stack.isEmpty()) {
-      area = arr[popped] * i;
-    } else {
-      area = arr[popped] * (i - 1 - stack.peek());
-    }
-    return Math.max(max, area);
-  }
 }
