@@ -27,10 +27,7 @@ class Solution {
         if(high!= null &&  node.val >= high){
             return false;
         }
-        boolean leftTree = helper(node.left,low,node.val);
-        boolean rightTree = helper(node.right,node.val,high);
-
-        return leftTree && rightTree;
+        return helper(node.left,low,node.val) && helper(node.right,node.val,high) ;
     }
      
 }
