@@ -30,7 +30,7 @@ class Solution {
         left = Math.max(0,left);
         right = Math.max(0,right);
         int pathsum = left + right + node.val;
-        ans = Math.max(max,pathsum);
+        max = Math.max(max,pathsum);
         return Math.max(left,right)+node.val;
     }
 }
