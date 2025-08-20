@@ -1,49 +1,48 @@
 class Solution {
     public int minimumEffortPath(int[][] heights) {
-        int row = heights.length;
-        int col = heights[0].length;
-        int[][] dist = new int[row][col];
-        for(int[] x : dist){
-            Arrays.fill(x,Integer.MAX_VALUE);
-        }
-        dist[0][0]= 0;
-        int[] dx = {0,0,-1,1};
-        int[] dy = {-1,1,0,0};
-        PriorityQueue<Tuple> pq = new PriorityQueue<Tuple>((x,y)->x.effort-y.effort);
-        pq.add(new Tuple(0,0,0));
-        while(pq.size()!=0){
+        int[][] arr = {{1,0},{-1,0},{0,1},{0,-1}};
+        int n = heights.length;
+        int m = heights[0].length;
+        int[][] dist = new int[n][m];
+        for(int[] x:dist) Arrays.fill(x,Integer.MAX_VALUE);
+        PriorityQueue<Tuple> pq = new PriorityQueue<>((x,y)->Integer.compare(x.effort,y.effort));
+        pq.offer(new Tuple(0,0,0));
+        dist[0][0] = 0;
+        while(!pq.isEmpty()){
             Tuple curr = pq.poll();
-            int dis = curr.effort;
-            int x = curr.r;
-            int y = curr.c;
-            if(x==row-1 && y == col-1){
-                    return dis;
+            int i = curr.i;
+            int j = curr.j;
+            int effort = curr.effort;
+            if(i==n-1 && j==m-1){
+                return effort;
             }
-            for(int i = 0;i<4;i++){
-                int nx = x + dx[i];
-                int ny = y + dy[i];
-                if(nx<0 || ny<0 || nx>=row || ny >= col){
+            for(int[] dir: arr){
+                int di = i+dir[0];
+                int dj = j+dir[1];
+                if(!isValid(di,dj,n,m)){
                     continue;
                 }
-                int eff =  Math.max(Math.abs(heights[x][y]-heights[nx][ny]),dis);
-                if(eff<dist[nx][ny]){
-                    dist[nx][ny]=eff;
-                    pq.add(new Tuple(eff,nx,ny));
+                int eff = Math.max(Math.abs(heights[i][j]-heights[di][dj]),effort);
+                if(eff<dist[di][dj]){
+                    dist[di][dj] = eff;
+                    pq.offer(new Tuple(di,dj,eff));
                 }
             }
 
         }
-        
         return 0;
     }
+    public boolean isValid(int i,int j,int n, int m){
+        return i>=0 && j>=0 && i<n && j<m;
+    }
+    
+}
 
-    class Tuple{
-        int effort,r,c;
-
-        public Tuple(int effort,int r,int c){
-            this.effort = effort;
-            this.r = r;
-            this.c = c;
-        }
+class Tuple{
+    int i,j,effort;
+    public Tuple(int i,int j,int effort){
+        this.i = i;
+        this.j = j;
+        this.effort = effort;
     }
 }
