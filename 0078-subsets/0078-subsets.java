@@ -1,18 +1,20 @@
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> res = new ArrayList<>();
-        List<Integer> sub = new ArrayList<>();
-        subsetRec(nums,sub,0,res);
-        return res;
-    }
-    public void subsetRec(int[] nums,List<Integer> sub,int index,List<List<Integer>> res){
-        if(index == nums.length){
-            res.add(new ArrayList<>(sub));
-            return;
+        int n = nums.length;
+        List<List<Integer>> ans = new ArrayList<>();
+        int x = (int)Math.pow(2,n)-1;
+        for(int i = 0;i<=x;i++){
+            List<Integer> list = new ArrayList<>();
+            for(int j = 0;j<n;j++){
+                int y = 1<<j;
+                int a = y&i;
+                if(a!=0){
+                    list.add(nums[j]);
+                }
+            }
+            ans.add(list);
         }
-        sub.add(nums[index]);
-        subsetRec(nums,sub,index+1,res);
-        sub.remove(sub.size() - 1);
-        subsetRec(nums,sub,index+1,res);
+        return ans;
     }
+    
 }
