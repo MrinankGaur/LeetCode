@@ -1,55 +1,57 @@
-class Pair{
-    int first;
-    int second;
-    public Pair(int first,int second){
-        this.first = first;
-        this.second = second;
-    }
-}
-class Tuple {
-    int first, second, third; 
-    Tuple(int first, int second, int third) {
-        this.first = first; 
-        this.second = second;
-        this.third = third; 
-    }
-}
 class Solution {
-    public int findCheapestPrice(int n,int flights[][],int src,int dst,int K) {
-        ArrayList<ArrayList<Pair>> adj = new ArrayList<>(); 
-        for(int i = 0;i<n;i++) {
-            adj.add(new ArrayList<>()); 
+    public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
+        ArrayList<ArrayList<Pair>> adj = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            adj.add(new ArrayList<>());
         }
-        int m = flights.length; 
-        for(int i = 0;i<m;i++) {
-            adj.get(flights[i][0]).add(new Pair(flights[i][1], flights[i][2])); 
+        for (int[] arr : flights) {
+            int u = arr[0], v = arr[1], w = arr[2];
+            adj.get(u).add(new Pair(v, w));
         }
-        Queue<Tuple> q = new LinkedList<>(); 
-        
-        q.add(new Tuple(0, src, 0)); 
-        int[] dist = new int[n]; 
-        for(int i = 0;i<n;i++) {
-            dist[i] = (int)(1e9); 
-        }
-        dist[src] = 0; 
-        while(!q.isEmpty()) {
-            Tuple it = q.poll(); 
-            int stops = it.first; 
-            int node = it.second; 
-            int cost = it.third; 
-            
-            
-            if(stops > K) continue; 
-            for(Pair iter: adj.get(node)) {
-                int adjNode = iter.first; 
-                int edW = iter.second; 
-                if (cost + edW < dist[adjNode] && stops <= K) {
-                    dist[adjNode] = cost + edW; 
-                    q.add(new Tuple(stops + 1, adjNode, cost + edW)); 
+
+        int[] dist = new int[n];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[src] = 0;
+
+        Queue<Tuple> pq = new LinkedList<>();
+        pq.offer(new Tuple(src, 0, 0)); // node, stops, cost
+
+        while (!pq.isEmpty()) {
+            Tuple curr = pq.poll();
+            int node = curr.s;
+            int stops = curr.d;
+            int cost = curr.price;
+
+            if (stops > k) continue; // can't exceed K stops
+
+            for (Pair it : adj.get(node)) {
+                int next = it.node;
+                int newCost = cost + it.price;
+
+                if (stops<=k && newCost < dist[next]) {
+                    dist[next] = newCost;
+                    pq.offer(new Tuple(next, stops + 1, newCost));
                 }
             }
         }
-        if(dist[dst] == (int)(1e9)) return -1; 
-        return dist[dst]; 
+
+        return dist[dst] == Integer.MAX_VALUE ? -1 : dist[dst];
+    }
+}
+
+class Pair {
+    int node, price;
+    public Pair(int node, int price) {
+        this.node = node;
+        this.price = price;
+    }
+}
+
+class Tuple {
+    int s, d, price;
+    public Tuple(int s, int d, int price) {
+        this.s = s;     // node
+        this.d = d;     // stops
+        this.price = price; // cost so far
     }
 }
