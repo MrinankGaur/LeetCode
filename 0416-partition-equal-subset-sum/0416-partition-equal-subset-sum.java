@@ -4,26 +4,21 @@ class Solution {
         for(int it: nums){
             sum+=it;
         }
+        if(sum%2!=0) return false;
         int target=sum/2;
         int n = nums.length;
         int[][] dp = new int[n][target+1];
-        for(int[] row: dp) Arrays.fill(row,-1);
-        if(sum%2!=0) return false;
-        return f(nums.length-1,target,nums,dp);
-        
-    }
-    public boolean f(int i,int target,int[] nums, int[][] dp){
-        if(i==0){
-            if(target==0){
-                return true;
+        dp[0][0] = 1;
+        if(nums[0]==target) dp[0][nums[0]] =1;
+        for(int i = 1;i<n;i++){
+            for(int t = 0;t<=target;t++){
+                boolean notTake = dp[i-1][t]==1;
+                boolean take = false;
+                if(nums[i]<=t) take = dp[i-1][t-nums[i]]==1;
+                dp[i][t] = take || notTake ? 1 : 0;
             }
-            return false;
         }
-        if(dp[i][target]!=-1) return dp[i][target]==1;
-        boolean notTake = f(i-1,target,nums,dp);
-        boolean take = false;
-        if(nums[i]<=target) take = f(i-1,target-nums[i],nums,dp);
-        dp[i][target] = take || notTake ? 1 : 0;
-        return take || notTake;
+        return dp[n-1][target]==1;
+        
     }
 }
