@@ -1,52 +1,48 @@
+import java.util.*;
+
 class Solution {
     public int countPaths(int n, int[][] roads) {
-        final int MOD = 1_000_000_007;
-        ArrayList<ArrayList<Pair>> adj = new ArrayList<>();
-        int[] dist = new int[n];
-        int[] ways = new int[n];
-        Arrays.fill(dist,Integer.MAX_VALUE);
-        dist[0]= 0;
-        ways[0]= 1;
-        for(int i = 0;i<n;i++){
-            adj.add(new ArrayList<Pair>());
+        ArrayList<ArrayList<int[]>> adj = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            adj.add(new ArrayList<>());
         }
-        for(int[] arr:roads){
-            int u = arr[0];
-            int v = arr[1];
-            int t = arr[2];
-            adj.get(u).add(new Pair(v,t));
-            adj.get(v).add(new Pair(u,t));
+        for (int[] road : roads) {
+            int u = road[0], v = road[1], w = road[2];
+            adj.get(u).add(new int[]{v, w});
+            adj.get(v).add(new int[]{u, w});
         }
-        PriorityQueue<Pair> pq = new PriorityQueue<>((x,y)->x.time-y.time);
-        pq.add(new Pair(0,0));
-        while(pq.size()!=0){
-            Pair curr = pq.poll();
-            int node = curr.node;
-            int time = curr.time;
-            if (time > dist[node]) {
-                continue;
-            }
-            for(Pair neighbour : adj.get(node)){
-                int travelTime = neighbour.time;
-                int nextNode = neighbour.node;
-                if(time + travelTime < dist[nextNode]){
-                    dist[nextNode] = time + travelTime;
-                    ways[nextNode] = ways[node];
-                    pq.add(new Pair(nextNode,dist[nextNode]));
+
+        long[] dist = new long[n];
+        Arrays.fill(dist, Long.MAX_VALUE);
+        long[] ways = new long[n];
+        int MOD = (int)1e9 + 7;
+
+        PriorityQueue<long[]> pq = new PriorityQueue<>((a, b) -> Long.compare(a[1], b[1]));
+        dist[0] = 0;
+        ways[0] = 1;
+        pq.offer(new long[]{0, 0});
+
+        while (!pq.isEmpty()) {
+            long[] curr = pq.poll();
+            int node = (int) curr[0];
+            long d = curr[1];
+
+            if (d > dist[node]) continue; // Skip outdated entries
+
+            for (int[] it : adj.get(node)) {
+                int next = it[0];
+                long nd = d + it[1];
+
+                if (nd < dist[next]) {
+                    dist[next] = nd;
+                    pq.offer(new long[]{next, nd});
+                    ways[next] = ways[node] % MOD;
+                } else if (nd == dist[next]) {
+                    ways[next] = (ways[next] + ways[node]) % MOD;
                 }
-                else if(time + travelTime == dist[nextNode]){
-                    ways[nextNode] = (ways[nextNode]+ ways[node])%MOD;
-                }
             }
-            
         }
-        return ways[n-1];
-    }
-    class Pair{
-        int node,time;
-        public Pair(int node,int time){
-            this.node = node;
-            this.time = time;
-        }
+
+        return (int)(ways[n - 1] % MOD);
     }
 }
