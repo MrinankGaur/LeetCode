@@ -1,38 +1,38 @@
 class Solution {
-    public boolean canFinish(int numCourses, int[][] prereq) {
-        ArrayList<ArrayList<Integer>> adj =new ArrayList<>();
-        for(int i = 0;i<numCourses;i++){
+    public boolean canFinish(int n, int[][] preq) {
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
             adj.add(new ArrayList<>());
         }
-        for(int[] arr:prereq){
-            int u = arr[0];
-            int v = arr[1];
-            adj.get(u).add(v);
+
+        int ans = 0;
+        int[] indeg = new int[n];
+
+        for (int[] arr : preq) {
+            int course = arr[0];
+            int pre = arr[1];
+            adj.get(pre).add(course);
+            indeg[course]++;
         }
-        int[] indeg = new int[numCourses];
-        for(int i =0;i<numCourses;i++){
-            for(int it:adj.get(i)){
-                indeg[it]++;
+
+        Queue<Integer> q = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            if (indeg[i] == 0) {
+                q.offer(i);
             }
         }
-        Queue<Integer> q = new LinkedList<>();
-        for(int i =0;i<numCourses;i++){
-            if(indeg[i]==0) q.offer(i);
-        }
-        ArrayList<Integer> topo = new ArrayList<>();
-        while(!q.isEmpty()){
+
+        while (!q.isEmpty()) {
             int curr = q.poll();
-            topo.add(curr);
-            for(Integer it:adj.get(curr)){
-                indeg[it]--;
-                if(indeg[it]==0){
-                    q.offer(it);
+            ans++;
+            for (int next : adj.get(curr)) {
+                indeg[next]--;
+                if (indeg[next] == 0) {
+                    q.offer(next);
                 }
             }
         }
-        return topo.size()==numCourses;
 
-
-
+        return ans == n;
     }
 }
