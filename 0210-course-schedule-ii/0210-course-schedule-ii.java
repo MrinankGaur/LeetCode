@@ -4,36 +4,33 @@ class Solution {
             findOrder(0, new int[][]{});
         }
     }
-    public static int[] findOrder(int numCourses, int[][] prerequisites) {
-         List<List<Integer>> graph = new ArrayList<>();
-        int course[]=new int[numCourses];
-        for(int i=0;i<numCourses;i++){
-            graph.add(new ArrayList<>());
+    public static int[] findOrder(int n, int[][] preq) {
+        int[] indeg = new int[n];
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        for(int i = 0;i<n;i++) adj.add(new ArrayList<>());
+        for(int[] arr:preq){
+            adj.get(arr[1]).add(arr[0]);
+            indeg[arr[0]]++;
         }
-        for(int pre[]:prerequisites){
-            int sub = pre[0];
-            int precourse = pre[1];
-            graph.get(precourse).add(sub);
-            course[sub]++;
-        }
+        int[] ans = new int[n];
         Queue<Integer> q = new LinkedList<>();
-        for(int i=0;i<numCourses;i++){
-            if(course[i] == 0){
-                q.add(i);
+        for(int i=0;i<n;i++){
+            if(indeg[i]==0){
+                q.offer(i);
             }
         }
-        int ans[]=new int[numCourses];
-        int i =0;
+        int it = 0;
         while(!q.isEmpty()){
-            int current = q.poll();
-            ans[i++] = current;
-            for(int neighbor:graph.get(current)){
-                course[neighbor]--;
-                if(course[neighbor] == 0){
-                    q.add(neighbor);
+            int curr = q.poll();
+            ans[it++] = curr;
+            for(int node : adj.get(curr)){
+                indeg[node]--;
+                if(indeg[node]==0){
+                    q.offer(node);
                 }
             }
         }
-        return i == numCourses?ans:new int[0];
+        return it==n ? ans : new int[]{}; 
+        
     }
 }
