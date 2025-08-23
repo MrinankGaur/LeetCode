@@ -10,8 +10,6 @@ class Solution {
                 if(mat[i][j]==0){
                   q.add(new int[]{i,j,0});
                   vis[i][j]=1; 
-                }else{
-                    vis[i][j]=0;
                 }
             }
         }
@@ -21,7 +19,6 @@ class Solution {
             int row = q.peek()[0];
             int col = q.peek()[1];
             int d = q.peek()[2];
-            //System.out.println("row :"+row+" col: "+col+" d: "+d);
             q.remove();
             dist[row][col]=d;
             
