@@ -19,13 +19,4 @@ class Solution {
             }
         }
     }
-    //  private void dfs(int node, int[] vis, int[][] isConnected) {
-    //     vis[node] = 1;
-    //     for (int i = 1; i <= isConnected.length; i++) {
-    //         if(isConnected[node-1][i-1] == 1 && vis[i] == 0) {
-    //             dfs(i, vis, isConnected);
-    //         } 
-    //     }
-    // }
-    
 }
