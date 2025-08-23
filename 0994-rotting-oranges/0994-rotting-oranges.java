@@ -1,4 +1,3 @@
-
 class Solution{
 public static int orangesRotting(int[][] grid) {
         if(grid == null || grid.length == 0) return 0;
@@ -6,8 +5,7 @@ public static int orangesRotting(int[][] grid) {
         int cols = grid[0].length;
         Queue<int[]> queue = new LinkedList<>();
         int count_fresh = 0;
-        //Put the position of all rotten oranges in queue
-        //count the number of fresh oranges
+
         for(int i = 0 ; i < rows ; i++) {
             for(int j = 0 ; j < cols ; j++) {
                 if(grid[i][j] == 2) {
@@ -23,8 +21,7 @@ public static int orangesRotting(int[][] grid) {
         int countMin = 0, cnt = 0;
         int dx[] = {0, 0, 1, -1};
         int dy[] = {1, -1, 0, 0};
-        
-        //bfs starting from initially rotten oranges
+
         while(!queue.isEmpty()) {
             int size = queue.size();
             cnt += size; 
