@@ -1,31 +1,34 @@
 class Solution {
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
-        int row = image.length;
-        int col = image[0].length;
-        
-        Queue<int[]> q = new LinkedList<>();
-         q.offer(new int[]{sr,sc});
-
-        int[] drow = {0,0,1,-1};
-        int[] dcol = {1,-1,0,0};
-        int[][] vis= new int[row][col];
+        int originalColor = image[sr][sc];
+        if (originalColor == color) return image;
+        int n = image.length;
+        int m = image[0].length;
+        int[][] arr = {{-1,0},{1,0},{0,-1},{0,1}};
+        image[sr][sc] = color;
+        Queue<Pair> q = new LinkedList<>();
+        q.offer(new Pair(sr,sc));
         while(!q.isEmpty()){
-            int r = q.peek()[0];
-            int c = q.peek()[1];
-            int check = image[r][c];
-            vis[r][c]=1;
-            image[r][c]=color;
-            q.remove();
-            for(int i = 0;i<4;i++){
-                int nr = r + drow[i];
-                int nc = c + dcol[i];
-                if(nr>=0 && nc>=0 && nr<row && nc<col && vis[nr][nc]!=1 && check==image[nr][nc]){
-                    q.offer(new int[]{nr,nc});
+            Pair curr = q.poll();
+            int r = curr.x;
+            int c = curr.y;
+            for(int[] dir:arr){
+                int x = r + dir[0];
+                int y = c + dir[1];
+                if(x>=0 && y>=0 && x<n && y<m && image[x][y]==originalColor){
+                    q.offer(new Pair(x,y));
+                    image[x][y] = color;
                 }
             }
+            image[r][c] = color;
         }
         return image;
-        
-           
+    }
+    class Pair{
+        int x,y;
+        public Pair(int x,int y){
+            this.x = x;
+            this.y = y;
+        }
     }
 }
