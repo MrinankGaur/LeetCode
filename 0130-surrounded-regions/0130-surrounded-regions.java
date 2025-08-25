@@ -1,50 +1,36 @@
 class Solution {
-    public void solve(char[][] mat) {
-        int n = mat.length;
-        int m = mat[0].length;
-        int delrow[] = {-1, 0, +1, 0};
-		int delcol[] = {0, 1, 0, -1};
-		int vis[][] = new int[n][m];
-		for(int j = 0 ; j<m;j++) {
-			if(vis[0][j] == 0 && mat[0][j] == 'O') {
-				dfs(0, j, vis, mat, delrow, delcol);
-			}
+    public void solve(char[][] board) {
+        int n = board.length;
+        int m = board[0].length;
+        int[][] arr = {{0,1},{0,-1},{1,0},{-1,0}};
+        int[][] vis = new int[n][m];
+        for(int i = 0;i<n;i++){
+            for(int j=0;j<m;j++){
+                if(i==0 || i==n-1 || j==0 || j==m-1){
+                    if(board[i][j]=='O'){
+                        dfs(i,j,n,m,arr,vis,board);
+                    }
+                }
+            }
+        }
+        for(int i =0;i<n;i++){
+            for(int j = 0;j<m;j++){
+                if(vis[i][j]==0 && board[i][j]=='O'){
+                    board[i][j] = 'X';
+                }
+            }
+        }
 
-			if(vis[n-1][j] == 0 && mat[n-1][j] == 'O') {
-				dfs(n-1,j,vis,mat, delrow, delcol);
-			}
-		}
 
-		for(int i = 0;i<n;i++) {
-
-			if(vis[i][0] == 0 && mat[i][0] == 'O') {
-				dfs(i, 0, vis, mat, delrow, delcol);
-			}
-
-
-			if(vis[i][m-1] == 0 && mat[i][m-1] == 'O') {
-				dfs(i, m-1, vis, mat, delrow, delcol);
-			}
-		}
-		for(int i = 0;i<n;i++) {
-			for(int j= 0 ;j<m;j++) {
-				if(vis[i][j] == 0 && mat[i][j] == 'O')
-					mat[i][j] = 'X';
-			}
-		}
     }
-    public void dfs(int row, int col,int vis[][],char mat[][], int delrow[], int delcol[]) {
-		vis[row][col] = 1;
-		int n = mat.length;
-		int m = mat[0].length;
-
-		for(int i = 0;i<4;i++) {
-			int nrow = row + delrow[i];
-			int ncol = col + delcol[i];
-
-			if(nrow >=0 && nrow <n && ncol >= 0 && ncol < m && vis[nrow][ncol] == 0 && mat[nrow][ncol] == 'O') {
-				dfs(nrow, ncol, vis, mat, delrow, delcol);
-			}
-		}
-	}
+    public void dfs(int i,int j,int n,int m,int[][] arr,int[][] vis,char[][] board){
+        vis[i][j] = 1;
+        for(int[] dir:arr){
+            int x = i+dir[0];
+            int y = j+dir[1];
+            if(x>=0 && y>=0 && x<n && y<m && board[x][y]=='O' && vis[x][y]==0){
+                dfs(x,y,n,m,arr,vis,board);
+            }
+        }
+    }
 }
