@@ -39,9 +39,9 @@ class Solution {
             }
         }
         Collections.sort(arr, (a, b) -> {
-            if (a.j != b.j) return a.j - b.j;   // sort by col
-            if (a.i != b.i) return a.i - b.i;   // then row
-            return a.node.val - b.node.val;     // then value
+            if (a.j != b.j) return a.j - b.j;   
+            if (a.i != b.i) return a.i - b.i;   
+            return a.node.val - b.node.val;     
         });
         for(int i =0;i<(right-left+1);i++){
             list.add(new ArrayList<>());
