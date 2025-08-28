@@ -16,7 +16,6 @@
 class Solution {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         List<List<Integer>> list = new ArrayList<>();
-        TreeNode temp = root;
         ArrayList<Tuple> arr = new ArrayList<>();
         Queue<Tuple> q = new LinkedList<>();
         q.offer(new Tuple(0,0,root));
