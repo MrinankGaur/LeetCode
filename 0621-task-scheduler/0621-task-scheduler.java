@@ -1,49 +1,55 @@
+import java.util.*;
+
 class Solution {
     public int leastInterval(char[] tasks, int n) {
         Map<Character,Integer> map = new HashMap<>();
-        for(char ch:tasks){
-            map.put(ch,map.getOrDefault(ch,0)+1);
+        for (char c : tasks) {
+            map.put(c, map.getOrDefault(c, 0) + 1);          
         }
-        PriorityQueue<Pair> pq = new PriorityQueue<>((a,b)->Integer.compare(b.freq,a.freq));
-        for(Map.Entry<Character,Integer> entry:map.entrySet()){
-            pq.offer(new Pair(entry.getKey(),entry.getValue()));
+
+
+        PriorityQueue<Pair> pq = new PriorityQueue<>((a,b) -> b.freq - a.freq);
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+            pq.offer(new Pair(entry.getKey(), entry.getValue()));
         }
+
+        Queue<PairCooldown> cooldown = new LinkedList<>();
         int time = 0;
-        Queue<Tuple> q = new LinkedList<>();
-        while(!pq.isEmpty() || !q.isEmpty()){
+
+        while (!pq.isEmpty() || !cooldown.isEmpty()) {
             time++;
-            if(!pq.isEmpty()){
+
+            if (!pq.isEmpty()) {
                 Pair curr = pq.poll();
-                char task = curr.task;
-                int freq = curr.freq-1;
-                if(freq>0){
-                    q.offer(new Tuple(task,freq,time+n));
+                curr.freq--;
+                if (curr.freq > 0) {
+                    cooldown.offer(new PairCooldown(curr, time + n));
                 }
             }
-            if(!q.isEmpty() && q.peek().time == time){
-                Tuple curr1 = q.poll();
-                pq.offer(new Pair(curr1.task,curr1.freq));
+
+            if (!cooldown.isEmpty() && cooldown.peek().readyTime == time) {
+                pq.offer(cooldown.poll().pair);
             }
         }
+
         return time;
     }
-    class Tuple{
+
+    class Pair {
         char task;
         int freq;
-        int time;
-        public Tuple(char task,int freq,int time){
+        public Pair(char task, int freq) {
             this.task = task;
             this.freq = freq;
-            this.time = time;
         }
-        
     }
-    class Pair{
-        char task;
-        int freq;
-        public Pair(char task,int freq){
-            this.task = task;
-            this.freq = freq;
+
+    class PairCooldown {
+        Pair pair;
+        int readyTime;
+        public PairCooldown(Pair pair, int readyTime) {
+            this.pair = pair;
+            this.readyTime = readyTime;
         }
     }
 }
