@@ -1,26 +1,49 @@
-import java.util.*;
-
 class Solution {
     public int leastInterval(char[] tasks, int n) {
-        int[] freq = new int[26];
-        for (char c : tasks) {
-            freq[c - 'A']++;
+        Map<Character,Integer> map = new HashMap<>();
+        for(char ch:tasks){
+            map.put(ch,map.getOrDefault(ch,0)+1);
         }
-
-        Arrays.sort(freq);
-        int maxFreq = freq[25];
-        int countMax = 0;
-
-        // Count how many tasks have frequency = maxFreq
-        for (int i = 25; i >= 0; i--) {
-            if (freq[i] == maxFreq) countMax++;
-            else break;
+        PriorityQueue<Pair> pq = new PriorityQueue<>((a,b)->Integer.compare(b.freq,a.freq));
+        for(Map.Entry<Character,Integer> entry:map.entrySet()){
+            pq.offer(new Pair(entry.getKey(),entry.getValue()));
         }
-
-        int partCount = maxFreq - 1;
-        int partLength = n + 1;
-        int minTime = partCount * partLength + countMax;
-
-        return Math.max(tasks.length, minTime);
+        int time = 0;
+        Queue<Tuple> q = new LinkedList<>();
+        while(!pq.isEmpty() || !q.isEmpty()){
+            time++;
+            if(!pq.isEmpty()){
+                Pair curr = pq.poll();
+                char task = curr.task;
+                int freq = curr.freq-1;
+                if(freq>0){
+                    q.offer(new Tuple(task,freq,time+n));
+                }
+            }
+            if(!q.isEmpty() && q.peek().time == time){
+                Tuple curr1 = q.poll();
+                pq.offer(new Pair(curr1.task,curr1.freq));
+            }
+        }
+        return time;
+    }
+    class Tuple{
+        char task;
+        int freq;
+        int time;
+        public Tuple(char task,int freq,int time){
+            this.task = task;
+            this.freq = freq;
+            this.time = time;
+        }
+        
+    }
+    class Pair{
+        char task;
+        int freq;
+        public Pair(char task,int freq){
+            this.task = task;
+            this.freq = freq;
+        }
     }
 }
