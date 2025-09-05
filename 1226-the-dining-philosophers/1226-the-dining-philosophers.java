@@ -1,14 +1,12 @@
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+class DiningPhilosophers {
 
-public class DiningPhilosophers {
-
-    private Lock leftForkLock = new ReentrantLock();
-    private Lock rightForkLock = new ReentrantLock();
+    Semaphore[] semaphores = new Semaphore[5];
 
     public DiningPhilosophers() {
-
+        for (int i = 0; i < semaphores.length; i++) {
+            semaphores[i] = new Semaphore(0);
+        }
+        semaphores[0].release(); // start with zeroth philosopher
     }
 
     // call the run() method of any runnable to execute its code
@@ -18,34 +16,12 @@ public class DiningPhilosophers {
                            Runnable eat,
                            Runnable putLeftFork,
                            Runnable putRightFork) throws InterruptedException {
-
-
-        while(true) {
-            if(leftForkLock.tryLock(100, TimeUnit.MILLISECONDS)) {
-                try {
-                    pickLeftFork.run();
-
-                    if (rightForkLock.tryLock(100, TimeUnit.MILLISECONDS)) {
-                        try {
-                            pickRightFork.run();
-                            eat.run();
-                            putRightFork.run();
-
-                            /*
-                             * we have eaten
-                             */
-                            return;
-                        } finally {
-                            rightForkLock.unlock();
-                        }
-                    }
-
-
-                } finally {
-                    putLeftFork.run();
-                    leftForkLock.unlock();
-                }
-            }
-        }
+        semaphores[philosopher].acquire(); // acquire for current philosopher
+        pickLeftFork.run();
+        pickRightFork.run();
+        eat.run();
+        putLeftFork.run();
+        putRightFork.run();
+        semaphores[(philosopher + 1) % 5].release(); // release for next philosopher
     }
 }
