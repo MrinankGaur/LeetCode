@@ -4,14 +4,21 @@ class Solution {
         for (int num : nums) {
             map.put(num, map.getOrDefault(num, 0) + 1);
         }
-        PriorityQueue<Pair> pq = new PriorityQueue<>((x,y)->Integer.compare(y.freq,x.freq));
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            pq.offer(new Pair(entry.getKey(),entry.getValue()));
+        ArrayList<Integer>[] bucket = new ArrayList[nums.length+1];
+        for(int key : map.keySet()){
+            int freq = map.get(key);
+            if(bucket[freq]==null){
+                bucket[freq] = new ArrayList<>();
+            }
+            bucket[freq].add(key);
+        }
+        ArrayList<Integer> result = new ArrayList<>();
+        for(int i = nums.length;i>=0 && result.size()<k;i--){
+            if(bucket[i]!=null) result.addAll(bucket[i]);
         }
         int[] ans = new int[k];
         for(int i = 0;i<k;i++){
-            Pair curr = pq.poll();
-            ans[i] = curr.n;
+            ans[i] = result.get(i);
         }
         return ans;
     }
