@@ -4,7 +4,6 @@ class Solution {
         int l=0,r=0;
         int max =Integer.MIN_VALUE;
         HashMap<Integer,Integer> map = new HashMap<>();
-
         while(r<n){
             map.put(fruits[r],map.getOrDefault(fruits[r],0)+1);
             while(map.size()>2){
