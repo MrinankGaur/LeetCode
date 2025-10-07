@@ -17,16 +17,6 @@ class Solution {
             max = Math.max(max,r-l+1);
             r++;
         }
-        // for(int i = 0;i<n;i++){
-        //     HashSet<Integer> set = new HashSet<>();
-        //     int x = 0;
-        //     for(int j = i;j<n;j++){
-        //         set.add(fruits[j]);
-        //         if(set.size()>2) break;
-        //         x++;
-        //     }
-        //     max = Math.max(x,max);
-        // }
         return max;
     }
 }
