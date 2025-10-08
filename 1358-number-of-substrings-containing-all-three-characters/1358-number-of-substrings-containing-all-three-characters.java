@@ -1,23 +1,12 @@
+import java.util.Arrays;
 class Solution {
     public int numberOfSubstrings(String s) {
-        HashMap<Character,Integer> map = new HashMap<>();
-        int n = s.length();
-        int l =0,r=0;
-        int count = 0;
-        while(r<n){
-            char c = s.charAt(r);
-            map.put(c,r);
-            int min = Integer.MAX_VALUE;
-            if(map.size()==3){
-                for(Map.Entry<Character,Integer> entry : map.entrySet()){
-                    min = Math.min(min,entry.getValue());
-                }
-                count += min-l+1;        
-            }
-            
-            r++;
-        }
-        return count;
+        int[] last = {-1 , -1 , -1}; int cnt = 0;
 
+        for(int i=0; i<s.length(); i++) {
+            last[s.charAt(i) - 'a'] = i;
+            cnt = cnt + (1 + Math.min(Math.min(last[0] , last[1]) , last[2])) ;
+        }
+        return cnt;
     }
 }
