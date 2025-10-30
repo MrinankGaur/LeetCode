@@ -23,16 +23,12 @@ class Solution {
             }else{
                 carry = 0;
             }
-            
             ListNode x = new ListNode(val);
             temp.next = x;
             temp = temp.next;
             if(l1!=null)l1 = l1.next;
-            
             if(l2!=null)l2 = l2.next;
-            
         }
-        
         if(carry==1){
             ListNode x = new ListNode(1);
             temp.next = x;
