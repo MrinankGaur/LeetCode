@@ -31,6 +31,7 @@ class Solution {
         return count;
     }
     public void dfs(int row, int col,int n,int m, int[][] grid, int[][] vis){
+        if(vis[row][col]==1) return;
         vis[row][col]=1;
         int[][] dir = {{0,1},{1,0},{0,-1},{-1,0}};
         for(int i =0;i<4;i++){
