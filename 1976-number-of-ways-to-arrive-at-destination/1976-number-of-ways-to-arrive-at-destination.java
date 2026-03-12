@@ -1,48 +1,52 @@
-import java.util.*;
-
 class Solution {
+    private class Pair{
+        int first;
+        int second;
+        public Pair(int first,int second){
+            this.first = first;
+            this.second = second;
+        }
+    }
+
     public int countPaths(int n, int[][] roads) {
-        ArrayList<ArrayList<int[]>> adj = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
+        ArrayList<ArrayList<Pair>> adj = new ArrayList<>();
+        for(int i = 0;i<n;i++){
             adj.add(new ArrayList<>());
         }
-        for (int[] road : roads) {
-            int u = road[0], v = road[1], w = road[2];
-            adj.get(u).add(new int[]{v, w});
-            adj.get(v).add(new int[]{u, w});
+        for(int[] arr:roads){
+            int u = arr[0];
+            int v = arr[1];
+            int w = arr[2];
+            adj.get(u).add(new Pair(v,w));
+            adj.get(v).add(new Pair(u,w));
         }
-
         long[] dist = new long[n];
-        Arrays.fill(dist, Long.MAX_VALUE);
+        Arrays.fill(dist,(int)1e9);
+        dist[0]=0;
         long[] ways = new long[n];
-        int MOD = (int)1e9 + 7;
-
-        PriorityQueue<long[]> pq = new PriorityQueue<>((a, b) -> Long.compare(a[1], b[1]));
-        dist[0] = 0;
-        ways[0] = 1;
-        pq.offer(new long[]{0, 0});
-
-        while (!pq.isEmpty()) {
-            long[] curr = pq.poll();
-            int node = (int) curr[0];
-            long d = curr[1];
-
-            if (d > dist[node]) continue; // Skip outdated entries
-
-            for (int[] it : adj.get(node)) {
-                int next = it[0];
-                long nd = d + it[1];
-
-                if (nd < dist[next]) {
-                    dist[next] = nd;
-                    pq.offer(new long[]{next, nd});
-                    ways[next] = ways[node] % MOD;
-                } else if (nd == dist[next]) {
-                    ways[next] = (ways[next] + ways[node]) % MOD;
+        ways[0]=1;
+        int mod = (int)1e9 + 7;
+        PriorityQueue<Pair> pq = new PriorityQueue<>((a, b) -> Long.compare(a.second, b.second));
+        pq.offer(new Pair(0,0));
+        while(!pq.isEmpty()){
+            Pair curr = pq.poll();
+            int node = curr.first;
+            int weight = curr.second;
+            if (weight > dist[node]) continue;
+            for(Pair it: adj.get(node)){
+                int next = it.first;
+                int w = it.second + weight;
+                if(w<dist[next]){
+                    dist[next] = w;
+                    pq.offer(new Pair(next, w));
+                    ways[next] = ways[node] % mod;
+                }
+                else if(w==dist[next]){
+                    ways[next] = (ways[node]+ways[next])%mod;
                 }
             }
         }
+        return (int)(ways[n - 1] % mod);
 
-        return (int)(ways[n - 1] % MOD);
     }
 }
