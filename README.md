@@ -34,6 +34,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0102-binary-tree-level-order-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
+| [0103-binary-tree-zigzag-level-order-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0103-binary-tree-zigzag-level-order-traversal/) | Medium |
 | [0199-binary-tree-right-side-view](https://github.com/MrinankGaur/LeetCode/tree/main/0199-binary-tree-right-side-view/) | Medium |
 | [0226-invert-binary-tree](https://github.com/MrinankGaur/LeetCode/tree/main/0226-invert-binary-tree/) | Easy |
 | [0743-network-delay-time](https://github.com/MrinankGaur/LeetCode/tree/main/0743-network-delay-time/) | Medium |
@@ -90,6 +91,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0094-binary-tree-inorder-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0094-binary-tree-inorder-traversal/) | Easy |
 | [0102-binary-tree-level-order-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
+| [0103-binary-tree-zigzag-level-order-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0103-binary-tree-zigzag-level-order-traversal/) | Medium |
 | [0110-balanced-binary-tree](https://github.com/MrinankGaur/LeetCode/tree/main/0110-balanced-binary-tree/) | Easy |
 | [0144-binary-tree-preorder-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0144-binary-tree-preorder-traversal/) | Easy |
 | [0199-binary-tree-right-side-view](https://github.com/MrinankGaur/LeetCode/tree/main/0199-binary-tree-right-side-view/) | Medium |
@@ -102,6 +104,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0094-binary-tree-inorder-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0094-binary-tree-inorder-traversal/) | Easy |
 | [0102-binary-tree-level-order-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0102-binary-tree-level-order-traversal/) | Medium |
+| [0103-binary-tree-zigzag-level-order-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0103-binary-tree-zigzag-level-order-traversal/) | Medium |
 | [0110-balanced-binary-tree](https://github.com/MrinankGaur/LeetCode/tree/main/0110-balanced-binary-tree/) | Easy |
 | [0144-binary-tree-preorder-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0144-binary-tree-preorder-traversal/) | Easy |
 | [0199-binary-tree-right-side-view](https://github.com/MrinankGaur/LeetCode/tree/main/0199-binary-tree-right-side-view/) | Medium |
