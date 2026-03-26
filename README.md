@@ -11,6 +11,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0200-number-of-islands](https://github.com/MrinankGaur/LeetCode/tree/main/0200-number-of-islands/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/MrinankGaur/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0463-island-perimeter](https://github.com/MrinankGaur/LeetCode/tree/main/0463-island-perimeter/) | Easy |
+| [0695-max-area-of-island](https://github.com/MrinankGaur/LeetCode/tree/main/0695-max-area-of-island/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -24,6 +25,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0073-set-matrix-zeroes](https://github.com/MrinankGaur/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0200-number-of-islands](https://github.com/MrinankGaur/LeetCode/tree/main/0200-number-of-islands/) | Medium |
 | [0463-island-perimeter](https://github.com/MrinankGaur/LeetCode/tree/main/0463-island-perimeter/) | Easy |
+| [0695-max-area-of-island](https://github.com/MrinankGaur/LeetCode/tree/main/0695-max-area-of-island/) | Medium |
 ## Depth-First Search
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -36,6 +38,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0230-kth-smallest-element-in-a-bst](https://github.com/MrinankGaur/LeetCode/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/MrinankGaur/LeetCode/tree/main/0235-lowest-common-ancestor-of-a-binary-search-tree/) | Medium |
 | [0463-island-perimeter](https://github.com/MrinankGaur/LeetCode/tree/main/0463-island-perimeter/) | Easy |
+| [0695-max-area-of-island](https://github.com/MrinankGaur/LeetCode/tree/main/0695-max-area-of-island/) | Medium |
 | [0743-network-delay-time](https://github.com/MrinankGaur/LeetCode/tree/main/0743-network-delay-time/) | Medium |
 ## Breadth-First Search
 | Problem Name | Difficulty |
@@ -46,6 +49,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0200-number-of-islands](https://github.com/MrinankGaur/LeetCode/tree/main/0200-number-of-islands/) | Medium |
 | [0226-invert-binary-tree](https://github.com/MrinankGaur/LeetCode/tree/main/0226-invert-binary-tree/) | Easy |
 | [0463-island-perimeter](https://github.com/MrinankGaur/LeetCode/tree/main/0463-island-perimeter/) | Easy |
+| [0695-max-area-of-island](https://github.com/MrinankGaur/LeetCode/tree/main/0695-max-area-of-island/) | Medium |
 | [0743-network-delay-time](https://github.com/MrinankGaur/LeetCode/tree/main/0743-network-delay-time/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
@@ -134,4 +138,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0200-number-of-islands](https://github.com/MrinankGaur/LeetCode/tree/main/0200-number-of-islands/) | Medium |
+| [0695-max-area-of-island](https://github.com/MrinankGaur/LeetCode/tree/main/0695-max-area-of-island/) | Medium |
 <!---LeetCode Topics End-->
