@@ -1,51 +1,42 @@
 class Solution {
     public int orangesRotting(int[][] grid) {
-        if(grid==null || grid.length==0) return 0;
-        int n = grid.length;
-        int m = grid[0].length;
-        int[][] arr = {{-1,0},{1,0},{0,-1},{0,1}};
-        Queue<Pair> q = new LinkedList<>();
-        int countFresh = 0;
-        for(int i = 0;i<n;i++){
-            for(int j = 0;j<m;j++){
+        int ROW = grid.length;
+        int COL = grid[0].length;
+        int[][] directions = {{1,0},{-1,0},{0,1},{0,-1}};
+        Queue<int[]> q = new LinkedList<>();
+        int fresh = 0;
+        for(int i = 0;i<ROW;i++){
+            for(int j = 0;j<COL;j++){
                 if(grid[i][j]==2){
-                    q.offer(new Pair(i,j));
+                    q.offer(new int[]{i,j});
                 }
-                else if(grid[i][j]==1){
-                    countFresh++;
+                if(grid[i][j]==1){
+                    fresh++;
                 }
             }
         }
-        if(countFresh==0) return 0;
-        int cnt = 0;
-        int countMin = 0;
+        int minute = 0;
         while(!q.isEmpty()){
             int size = q.size();
-            for(int l = 0;l<size;l++){
-                Pair curr = q.poll();
-                int i = curr.x;
-                int j = curr.y;
-                for(int[] dir:arr){
-                    int x = i+dir[0];
-                    int y = j+dir[1];
-                    if(x>=0 && y>=0 && x<n && y<m && grid[x][y]==1){
-                        grid[x][y] = 2;
-                        q.offer(new Pair(x,y));
-                        cnt++;
-                    }
+            boolean rot = false;
+            for(int k = 0;k<size;k++){
+                int[] curr = q.poll();
+                int r = curr[0];
+                int c = curr[1];
+                for(int[] dir:directions){
+                    int dr = r + dir[0];
+                    int dc = c + dir[1];
+                    if(dr<0 || dc<0 || dr>=ROW || dc>=COL || grid[dr][dc]!=1) continue;
+                    q.offer(new int[]{dr,dc});
+                    grid[dr][dc]=2;
+                    fresh--;
+                    if(fresh==0) return minute+1;
+                    rot = true;
                 }
             }
-            if(q.size()!=0){
-                countMin++;
-            }
+            minute = (rot)?minute+1:minute;
         }
-        return countFresh == cnt ? countMin: -1;
-    }
-    public class Pair{
-        int x, y;
-        public Pair(int x,int y){
-            this.x = x;
-            this.y = y;
-        }
+        
+        return (fresh==0)?minute:-1;   
     }
 }
