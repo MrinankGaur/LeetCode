@@ -1,47 +1,51 @@
-class Solution{
-public static int orangesRotting(int[][] grid) {
-        if(grid == null || grid.length == 0) return 0;
-        int rows = grid.length;
-        int cols = grid[0].length;
-        Queue<int[]> queue = new LinkedList<>();
-        int count_fresh = 0;
-
-        for(int i = 0 ; i < rows ; i++) {
-            for(int j = 0 ; j < cols ; j++) {
-                if(grid[i][j] == 2) {
-                    queue.offer(new int[]{i , j});
+class Solution {
+    public int orangesRotting(int[][] grid) {
+        if(grid==null || grid.length==0) return 0;
+        int n = grid.length;
+        int m = grid[0].length;
+        int[][] arr = {{-1,0},{1,0},{0,-1},{0,1}};
+        Queue<Pair> q = new LinkedList<>();
+        int countFresh = 0;
+        for(int i = 0;i<n;i++){
+            for(int j = 0;j<m;j++){
+                if(grid[i][j]==2){
+                    q.offer(new Pair(i,j));
                 }
-                if(grid[i][j] != 0) {
-                    count_fresh++;
+                else if(grid[i][j]==1){
+                    countFresh++;
                 }
             }
         }
-       
-        if(count_fresh == 0) return 0;
-        int countMin = 0, cnt = 0;
-        int dx[] = {0, 0, 1, -1};
-        int dy[] = {1, -1, 0, 0};
-
-        while(!queue.isEmpty()) {
-            int size = queue.size();
-            cnt += size; 
-            for(int i = 0 ; i < size ; i++) {
-                int[] point = queue.poll();
-                for(int j = 0;j<4;j++) {
-                    int x = point[0] + dx[j];
-                    int y = point[1] + dy[j];
-                    
-                    if(x < 0 || y < 0 || x >= rows || y >= cols || grid[x][y] == 0 || 
-                    grid[x][y] == 2) continue;
-                    
-                    grid[x][y] = 2;
-                    queue.offer(new int[]{x , y});
+        if(countFresh==0) return 0;
+        int cnt = 0;
+        int countMin = 0;
+        while(!q.isEmpty()){
+            int size = q.size();
+            for(int l = 0;l<size;l++){
+                Pair curr = q.poll();
+                int i = curr.x;
+                int j = curr.y;
+                for(int[] dir:arr){
+                    int x = i+dir[0];
+                    int y = j+dir[1];
+                    if(x>=0 && y>=0 && x<n && y<m && grid[x][y]==1){
+                        grid[x][y] = 2;
+                        q.offer(new Pair(x,y));
+                        cnt++;
+                    }
                 }
             }
-            if(queue.size() != 0) {
+            if(q.size()!=0){
                 countMin++;
             }
         }
-        return count_fresh == cnt ? countMin : -1;
+        return countFresh == cnt ? countMin: -1;
+    }
+    public class Pair{
+        int x, y;
+        public Pair(int x,int y){
+            this.x = x;
+            this.y = y;
+        }
     }
 }
