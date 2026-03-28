@@ -20,11 +20,13 @@ class Solution {
         List<List<Integer>> list = new ArrayList<>();
         for(String arr:pacific){
             if(atlantic.contains(arr)){
-              String[] parts = arr.split(",");
-                list.add(Arrays.asList(
-                    Integer.parseInt(parts[0]),
-                    Integer.parseInt(parts[1])
-                ));  
+              List<Integer> temp = new ArrayList<>();
+              for(char ch:arr.toCharArray()){
+                if(ch>='0' && ch<='9'){
+                    temp.add(ch-'0');
+                }
+              }
+              list.add(temp);
             }
         }
         return list;
