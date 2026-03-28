@@ -17,7 +17,6 @@ class Solution {
             for(int j = 0;j<m;j++){
                 if(vis[i][j]==0 && board[i][j]=='O'){
                     board[i][j] = 'X';
-                    
                 }
             }
         }
