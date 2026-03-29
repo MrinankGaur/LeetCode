@@ -15,6 +15,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0417-pacific-atlantic-water-flow](https://github.com/MrinankGaur/LeetCode/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
 | [0463-island-perimeter](https://github.com/MrinankGaur/LeetCode/tree/main/0463-island-perimeter/) | Easy |
 | [0695-max-area-of-island](https://github.com/MrinankGaur/LeetCode/tree/main/0695-max-area-of-island/) | Medium |
+| [0752-open-the-lock](https://github.com/MrinankGaur/LeetCode/tree/main/0752-open-the-lock/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/MrinankGaur/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
 | [0994-rotting-oranges](https://github.com/MrinankGaur/LeetCode/tree/main/0994-rotting-oranges/) | Medium |
 | [1046-last-stone-weight](https://github.com/MrinankGaur/LeetCode/tree/main/1046-last-stone-weight/) | Easy |
@@ -25,6 +26,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0073-set-matrix-zeroes](https://github.com/MrinankGaur/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0133-clone-graph](https://github.com/MrinankGaur/LeetCode/tree/main/0133-clone-graph/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/MrinankGaur/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0752-open-the-lock](https://github.com/MrinankGaur/LeetCode/tree/main/0752-open-the-lock/) | Medium |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -67,6 +69,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0463-island-perimeter](https://github.com/MrinankGaur/LeetCode/tree/main/0463-island-perimeter/) | Easy |
 | [0695-max-area-of-island](https://github.com/MrinankGaur/LeetCode/tree/main/0695-max-area-of-island/) | Medium |
 | [0743-network-delay-time](https://github.com/MrinankGaur/LeetCode/tree/main/0743-network-delay-time/) | Medium |
+| [0752-open-the-lock](https://github.com/MrinankGaur/LeetCode/tree/main/0752-open-the-lock/) | Medium |
 | [0994-rotting-oranges](https://github.com/MrinankGaur/LeetCode/tree/main/0994-rotting-oranges/) | Medium |
 ## Graph Theory
 | Problem Name | Difficulty |
@@ -187,4 +190,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0973-k-closest-points-to-origin](https://github.com/MrinankGaur/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
+## String
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0752-open-the-lock](https://github.com/MrinankGaur/LeetCode/tree/main/0752-open-the-lock/) | Medium |
 <!---LeetCode Topics End-->
