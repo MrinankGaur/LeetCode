@@ -35,8 +35,6 @@ class Solution {
         for (int[] qy : queries) {
             ans.add(pre.get(qy[1]).contains(qy[0]));
         }
-
         return ans;
-
     }
 }
