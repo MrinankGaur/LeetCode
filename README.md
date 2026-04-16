@@ -10,6 +10,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0073-set-matrix-zeroes](https://github.com/MrinankGaur/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0130-surrounded-regions](https://github.com/MrinankGaur/LeetCode/tree/main/0130-surrounded-regions/) | Medium |
 | [0200-number-of-islands](https://github.com/MrinankGaur/LeetCode/tree/main/0200-number-of-islands/) | Medium |
+| [0213-house-robber-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0213-house-robber-ii/) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/MrinankGaur/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0332-reconstruct-itinerary](https://github.com/MrinankGaur/LeetCode/tree/main/0332-reconstruct-itinerary/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/MrinankGaur/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
@@ -107,6 +108,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0213-house-robber-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0213-house-robber-ii/) | Medium |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/MrinankGaur/LeetCode/tree/main/1976-number-of-ways-to-arrive-at-destination/) | Medium |
 ## Topological Sort
 | Problem Name | Difficulty |
