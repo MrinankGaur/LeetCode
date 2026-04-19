@@ -16,6 +16,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0347-top-k-frequent-elements](https://github.com/MrinankGaur/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0417-pacific-atlantic-water-flow](https://github.com/MrinankGaur/LeetCode/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
 | [0463-island-perimeter](https://github.com/MrinankGaur/LeetCode/tree/main/0463-island-perimeter/) | Easy |
+| [0621-task-scheduler](https://github.com/MrinankGaur/LeetCode/tree/main/0621-task-scheduler/) | Medium |
 | [0695-max-area-of-island](https://github.com/MrinankGaur/LeetCode/tree/main/0695-max-area-of-island/) | Medium |
 | [0752-open-the-lock](https://github.com/MrinankGaur/LeetCode/tree/main/0752-open-the-lock/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/MrinankGaur/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
@@ -28,6 +29,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0073-set-matrix-zeroes](https://github.com/MrinankGaur/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0133-clone-graph](https://github.com/MrinankGaur/LeetCode/tree/main/0133-clone-graph/) | Medium |
 | [0347-top-k-frequent-elements](https://github.com/MrinankGaur/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0621-task-scheduler](https://github.com/MrinankGaur/LeetCode/tree/main/0621-task-scheduler/) | Medium |
 | [0752-open-the-lock](https://github.com/MrinankGaur/LeetCode/tree/main/0752-open-the-lock/) | Medium |
 ## Matrix
 | Problem Name | Difficulty |
@@ -96,6 +98,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0215-kth-largest-element-in-an-array](https://github.com/MrinankGaur/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0332-reconstruct-itinerary](https://github.com/MrinankGaur/LeetCode/tree/main/0332-reconstruct-itinerary/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/MrinankGaur/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0621-task-scheduler](https://github.com/MrinankGaur/LeetCode/tree/main/0621-task-scheduler/) | Medium |
 | [0703-kth-largest-element-in-a-stream](https://github.com/MrinankGaur/LeetCode/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
 | [0743-network-delay-time](https://github.com/MrinankGaur/LeetCode/tree/main/0743-network-delay-time/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/MrinankGaur/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
@@ -130,6 +133,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0215-kth-largest-element-in-an-array](https://github.com/MrinankGaur/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0332-reconstruct-itinerary](https://github.com/MrinankGaur/LeetCode/tree/main/0332-reconstruct-itinerary/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/MrinankGaur/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0621-task-scheduler](https://github.com/MrinankGaur/LeetCode/tree/main/0621-task-scheduler/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/MrinankGaur/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
 ## Bucket Sort
 | Problem Name | Difficulty |
@@ -139,6 +143,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0347-top-k-frequent-elements](https://github.com/MrinankGaur/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0621-task-scheduler](https://github.com/MrinankGaur/LeetCode/tree/main/0621-task-scheduler/) | Medium |
 ## Quickselect
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -220,4 +225,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0332-reconstruct-itinerary](https://github.com/MrinankGaur/LeetCode/tree/main/0332-reconstruct-itinerary/) | Hard |
+## Greedy
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0621-task-scheduler](https://github.com/MrinankGaur/LeetCode/tree/main/0621-task-scheduler/) | Medium |
 <!---LeetCode Topics End-->
