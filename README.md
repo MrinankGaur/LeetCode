@@ -8,6 +8,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0014-longest-common-prefix](https://github.com/MrinankGaur/LeetCode/tree/main/0014-longest-common-prefix/) | Easy |
 | [0036-valid-sudoku](https://github.com/MrinankGaur/LeetCode/tree/main/0036-valid-sudoku/) | Medium |
+| [0049-group-anagrams](https://github.com/MrinankGaur/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/MrinankGaur/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0130-surrounded-regions](https://github.com/MrinankGaur/LeetCode/tree/main/0130-surrounded-regions/) | Medium |
 | [0200-number-of-islands](https://github.com/MrinankGaur/LeetCode/tree/main/0200-number-of-islands/) | Medium |
@@ -29,6 +30,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0036-valid-sudoku](https://github.com/MrinankGaur/LeetCode/tree/main/0036-valid-sudoku/) | Medium |
+| [0049-group-anagrams](https://github.com/MrinankGaur/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/MrinankGaur/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0133-clone-graph](https://github.com/MrinankGaur/LeetCode/tree/main/0133-clone-graph/) | Medium |
 | [0217-contains-duplicate](https://github.com/MrinankGaur/LeetCode/tree/main/0217-contains-duplicate/) | Easy |
@@ -135,6 +137,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0049-group-anagrams](https://github.com/MrinankGaur/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/MrinankGaur/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
 | [0217-contains-duplicate](https://github.com/MrinankGaur/LeetCode/tree/main/0217-contains-duplicate/) | Easy |
 | [0242-valid-anagram](https://github.com/MrinankGaur/LeetCode/tree/main/0242-valid-anagram/) | Easy |
@@ -226,6 +229,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0014-longest-common-prefix](https://github.com/MrinankGaur/LeetCode/tree/main/0014-longest-common-prefix/) | Easy |
+| [0049-group-anagrams](https://github.com/MrinankGaur/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0091-decode-ways](https://github.com/MrinankGaur/LeetCode/tree/main/0091-decode-ways/) | Medium |
 | [0242-valid-anagram](https://github.com/MrinankGaur/LeetCode/tree/main/0242-valid-anagram/) | Easy |
 | [0332-reconstruct-itinerary](https://github.com/MrinankGaur/LeetCode/tree/main/0332-reconstruct-itinerary/) | Hard |
