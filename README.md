@@ -23,6 +23,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0973-k-closest-points-to-origin](https://github.com/MrinankGaur/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
 | [0994-rotting-oranges](https://github.com/MrinankGaur/LeetCode/tree/main/0994-rotting-oranges/) | Medium |
 | [1046-last-stone-weight](https://github.com/MrinankGaur/LeetCode/tree/main/1046-last-stone-weight/) | Easy |
+| [1929-concatenation-of-array](https://github.com/MrinankGaur/LeetCode/tree/main/1929-concatenation-of-array/) | Easy |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -240,4 +241,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0206-reverse-linked-list](https://github.com/MrinankGaur/LeetCode/tree/main/0206-reverse-linked-list/) | Easy |
+## Simulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1929-concatenation-of-array](https://github.com/MrinankGaur/LeetCode/tree/main/1929-concatenation-of-array/) | Easy |
 <!---LeetCode Topics End-->
