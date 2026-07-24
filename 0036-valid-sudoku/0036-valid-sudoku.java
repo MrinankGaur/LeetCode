@@ -1,7 +1,7 @@
 class Solution {
     public boolean isValidSudoku(char[][] board) {
-        int n = board.length;
-        int m = board.length;
+        int n = 9;
+        int m = 9;
         for(int i = 0;i<n;i++){
             for(int j = 0;j<m;j++){
                 if(board[i][j]=='.') continue;
