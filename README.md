@@ -10,6 +10,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0036-valid-sudoku](https://github.com/MrinankGaur/LeetCode/tree/main/0036-valid-sudoku/) | Medium |
 | [0049-group-anagrams](https://github.com/MrinankGaur/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/MrinankGaur/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
+| [0128-longest-consecutive-sequence](https://github.com/MrinankGaur/LeetCode/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0130-surrounded-regions](https://github.com/MrinankGaur/LeetCode/tree/main/0130-surrounded-regions/) | Medium |
 | [0169-majority-element](https://github.com/MrinankGaur/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0200-number-of-islands](https://github.com/MrinankGaur/LeetCode/tree/main/0200-number-of-islands/) | Medium |
@@ -38,6 +39,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0036-valid-sudoku](https://github.com/MrinankGaur/LeetCode/tree/main/0036-valid-sudoku/) | Medium |
 | [0049-group-anagrams](https://github.com/MrinankGaur/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/MrinankGaur/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
+| [0128-longest-consecutive-sequence](https://github.com/MrinankGaur/LeetCode/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0133-clone-graph](https://github.com/MrinankGaur/LeetCode/tree/main/0133-clone-graph/) | Medium |
 | [0169-majority-element](https://github.com/MrinankGaur/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0217-contains-duplicate](https://github.com/MrinankGaur/LeetCode/tree/main/0217-contains-duplicate/) | Easy |
@@ -223,6 +225,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0128-longest-consecutive-sequence](https://github.com/MrinankGaur/LeetCode/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0130-surrounded-regions](https://github.com/MrinankGaur/LeetCode/tree/main/0130-surrounded-regions/) | Medium |
 | [0200-number-of-islands](https://github.com/MrinankGaur/LeetCode/tree/main/0200-number-of-islands/) | Medium |
 | [0695-max-area-of-island](https://github.com/MrinankGaur/LeetCode/tree/main/0695-max-area-of-island/) | Medium |
