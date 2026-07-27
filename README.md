@@ -8,6 +8,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0014-longest-common-prefix](https://github.com/MrinankGaur/LeetCode/tree/main/0014-longest-common-prefix/) | Easy |
 | [0036-valid-sudoku](https://github.com/MrinankGaur/LeetCode/tree/main/0036-valid-sudoku/) | Medium |
+| [0041-first-missing-positive](https://github.com/MrinankGaur/LeetCode/tree/main/0041-first-missing-positive/) | Hard |
 | [0049-group-anagrams](https://github.com/MrinankGaur/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/MrinankGaur/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
@@ -39,6 +40,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0036-valid-sudoku](https://github.com/MrinankGaur/LeetCode/tree/main/0036-valid-sudoku/) | Medium |
+| [0041-first-missing-positive](https://github.com/MrinankGaur/LeetCode/tree/main/0041-first-missing-positive/) | Hard |
 | [0049-group-anagrams](https://github.com/MrinankGaur/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/MrinankGaur/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0128-longest-consecutive-sequence](https://github.com/MrinankGaur/LeetCode/tree/main/0128-longest-consecutive-sequence/) | Medium |
