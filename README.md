@@ -263,6 +263,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0125-valid-palindrome](https://github.com/MrinankGaur/LeetCode/tree/main/0125-valid-palindrome/) | Easy |
 | [0242-valid-anagram](https://github.com/MrinankGaur/LeetCode/tree/main/0242-valid-anagram/) | Easy |
 | [0332-reconstruct-itinerary](https://github.com/MrinankGaur/LeetCode/tree/main/0332-reconstruct-itinerary/) | Hard |
+| [0680-valid-palindrome-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0680-valid-palindrome-ii/) | Easy |
 | [0752-open-the-lock](https://github.com/MrinankGaur/LeetCode/tree/main/0752-open-the-lock/) | Medium |
 ## Eulerian Circuit
 | Problem Name | Difficulty |
@@ -273,6 +274,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
 | [0621-task-scheduler](https://github.com/MrinankGaur/LeetCode/tree/main/0621-task-scheduler/) | Medium |
+| [0680-valid-palindrome-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0680-valid-palindrome-ii/) | Easy |
 ## Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -318,4 +320,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0125-valid-palindrome](https://github.com/MrinankGaur/LeetCode/tree/main/0125-valid-palindrome/) | Easy |
+| [0680-valid-palindrome-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0680-valid-palindrome-ii/) | Easy |
 <!---LeetCode Topics End-->
