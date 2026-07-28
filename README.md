@@ -265,6 +265,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0332-reconstruct-itinerary](https://github.com/MrinankGaur/LeetCode/tree/main/0332-reconstruct-itinerary/) | Hard |
 | [0680-valid-palindrome-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0680-valid-palindrome-ii/) | Easy |
 | [0752-open-the-lock](https://github.com/MrinankGaur/LeetCode/tree/main/0752-open-the-lock/) | Medium |
+| [1768-merge-strings-alternately](https://github.com/MrinankGaur/LeetCode/tree/main/1768-merge-strings-alternately/) | Easy |
 ## Eulerian Circuit
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -321,4 +322,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0125-valid-palindrome](https://github.com/MrinankGaur/LeetCode/tree/main/0125-valid-palindrome/) | Easy |
 | [0680-valid-palindrome-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0680-valid-palindrome-ii/) | Easy |
+| [1768-merge-strings-alternately](https://github.com/MrinankGaur/LeetCode/tree/main/1768-merge-strings-alternately/) | Easy |
 <!---LeetCode Topics End-->
