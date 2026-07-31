@@ -21,6 +21,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0130-surrounded-regions](https://github.com/MrinankGaur/LeetCode/tree/main/0130-surrounded-regions/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/MrinankGaur/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0169-majority-element](https://github.com/MrinankGaur/LeetCode/tree/main/0169-majority-element/) | Easy |
+| [0189-rotate-array](https://github.com/MrinankGaur/LeetCode/tree/main/0189-rotate-array/) | Medium |
 | [0200-number-of-islands](https://github.com/MrinankGaur/LeetCode/tree/main/0200-number-of-islands/) | Medium |
 | [0213-house-robber-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0213-house-robber-ii/) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/MrinankGaur/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
@@ -262,6 +263,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0189-rotate-array](https://github.com/MrinankGaur/LeetCode/tree/main/0189-rotate-array/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/MrinankGaur/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
 ## Geometry
 | Problem Name | Difficulty |
@@ -341,6 +343,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0088-merge-sorted-array](https://github.com/MrinankGaur/LeetCode/tree/main/0088-merge-sorted-array/) | Easy |
 | [0125-valid-palindrome](https://github.com/MrinankGaur/LeetCode/tree/main/0125-valid-palindrome/) | Easy |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/MrinankGaur/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
+| [0189-rotate-array](https://github.com/MrinankGaur/LeetCode/tree/main/0189-rotate-array/) | Medium |
 | [0680-valid-palindrome-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0680-valid-palindrome-ii/) | Easy |
 | [1768-merge-strings-alternately](https://github.com/MrinankGaur/LeetCode/tree/main/1768-merge-strings-alternately/) | Easy |
 ## Monotonic Stack
