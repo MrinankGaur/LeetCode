@@ -19,6 +19,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
 | [0128-longest-consecutive-sequence](https://github.com/MrinankGaur/LeetCode/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0130-surrounded-regions](https://github.com/MrinankGaur/LeetCode/tree/main/0130-surrounded-regions/) | Medium |
+| [0150-evaluate-reverse-polish-notation](https://github.com/MrinankGaur/LeetCode/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/MrinankGaur/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0169-majority-element](https://github.com/MrinankGaur/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0189-rotate-array](https://github.com/MrinankGaur/LeetCode/tree/main/0189-rotate-array/) | Medium |
@@ -210,6 +211,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0042-trapping-rain-water](https://github.com/MrinankGaur/LeetCode/tree/main/0042-trapping-rain-water/) | Hard |
 | [0094-binary-tree-inorder-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0094-binary-tree-inorder-traversal/) | Easy |
 | [0144-binary-tree-preorder-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0144-binary-tree-preorder-traversal/) | Easy |
+| [0150-evaluate-reverse-polish-notation](https://github.com/MrinankGaur/LeetCode/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0155-min-stack](https://github.com/MrinankGaur/LeetCode/tree/main/0155-min-stack/) | Medium |
 | [0225-implement-stack-using-queues](https://github.com/MrinankGaur/LeetCode/tree/main/0225-implement-stack-using-queues/) | Easy |
 | [0232-implement-queue-using-stacks](https://github.com/MrinankGaur/LeetCode/tree/main/0232-implement-queue-using-stacks/) | Easy |
@@ -277,6 +279,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Math
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0150-evaluate-reverse-polish-notation](https://github.com/MrinankGaur/LeetCode/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0189-rotate-array](https://github.com/MrinankGaur/LeetCode/tree/main/0189-rotate-array/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/MrinankGaur/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
 ## Geometry
