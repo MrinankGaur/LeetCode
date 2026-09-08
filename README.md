@@ -40,6 +40,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0695-max-area-of-island](https://github.com/MrinankGaur/LeetCode/tree/main/0695-max-area-of-island/) | Medium |
 | [0705-design-hashset](https://github.com/MrinankGaur/LeetCode/tree/main/0705-design-hashset/) | Easy |
 | [0706-design-hashmap](https://github.com/MrinankGaur/LeetCode/tree/main/0706-design-hashmap/) | Easy |
+| [0735-asteroid-collision](https://github.com/MrinankGaur/LeetCode/tree/main/0735-asteroid-collision/) | Medium |
 | [0752-open-the-lock](https://github.com/MrinankGaur/LeetCode/tree/main/0752-open-the-lock/) | Medium |
 | [0881-boats-to-save-people](https://github.com/MrinankGaur/LeetCode/tree/main/0881-boats-to-save-people/) | Medium |
 | [0912-sort-an-array](https://github.com/MrinankGaur/LeetCode/tree/main/0912-sort-an-array/) | Medium |
@@ -215,6 +216,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0155-min-stack](https://github.com/MrinankGaur/LeetCode/tree/main/0155-min-stack/) | Medium |
 | [0225-implement-stack-using-queues](https://github.com/MrinankGaur/LeetCode/tree/main/0225-implement-stack-using-queues/) | Easy |
 | [0232-implement-queue-using-stacks](https://github.com/MrinankGaur/LeetCode/tree/main/0232-implement-queue-using-stacks/) | Easy |
+| [0735-asteroid-collision](https://github.com/MrinankGaur/LeetCode/tree/main/0735-asteroid-collision/) | Medium |
 ## Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -326,6 +328,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0735-asteroid-collision](https://github.com/MrinankGaur/LeetCode/tree/main/0735-asteroid-collision/) | Medium |
 | [1929-concatenation-of-array](https://github.com/MrinankGaur/LeetCode/tree/main/1929-concatenation-of-array/) | Easy |
 ## Trie
 | Problem Name | Difficulty |
