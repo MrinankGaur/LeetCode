@@ -43,6 +43,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0735-asteroid-collision](https://github.com/MrinankGaur/LeetCode/tree/main/0735-asteroid-collision/) | Medium |
 | [0739-daily-temperatures](https://github.com/MrinankGaur/LeetCode/tree/main/0739-daily-temperatures/) | Medium |
 | [0752-open-the-lock](https://github.com/MrinankGaur/LeetCode/tree/main/0752-open-the-lock/) | Medium |
+| [0853-car-fleet](https://github.com/MrinankGaur/LeetCode/tree/main/0853-car-fleet/) | Medium |
 | [0881-boats-to-save-people](https://github.com/MrinankGaur/LeetCode/tree/main/0881-boats-to-save-people/) | Medium |
 | [0912-sort-an-array](https://github.com/MrinankGaur/LeetCode/tree/main/0912-sort-an-array/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/MrinankGaur/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
@@ -187,6 +188,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0332-reconstruct-itinerary](https://github.com/MrinankGaur/LeetCode/tree/main/0332-reconstruct-itinerary/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/MrinankGaur/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0621-task-scheduler](https://github.com/MrinankGaur/LeetCode/tree/main/0621-task-scheduler/) | Medium |
+| [0853-car-fleet](https://github.com/MrinankGaur/LeetCode/tree/main/0853-car-fleet/) | Medium |
 | [0881-boats-to-save-people](https://github.com/MrinankGaur/LeetCode/tree/main/0881-boats-to-save-people/) | Medium |
 | [0912-sort-an-array](https://github.com/MrinankGaur/LeetCode/tree/main/0912-sort-an-array/) | Medium |
 | [0973-k-closest-points-to-origin](https://github.com/MrinankGaur/LeetCode/tree/main/0973-k-closest-points-to-origin/) | Medium |
@@ -219,6 +221,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0232-implement-queue-using-stacks](https://github.com/MrinankGaur/LeetCode/tree/main/0232-implement-queue-using-stacks/) | Easy |
 | [0735-asteroid-collision](https://github.com/MrinankGaur/LeetCode/tree/main/0735-asteroid-collision/) | Medium |
 | [0739-daily-temperatures](https://github.com/MrinankGaur/LeetCode/tree/main/0739-daily-temperatures/) | Medium |
+| [0853-car-fleet](https://github.com/MrinankGaur/LeetCode/tree/main/0853-car-fleet/) | Medium |
 | [0901-online-stock-span](https://github.com/MrinankGaur/LeetCode/tree/main/0901-online-stock-span/) | Medium |
 ## Tree
 | Problem Name | Difficulty |
@@ -382,6 +385,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0042-trapping-rain-water](https://github.com/MrinankGaur/LeetCode/tree/main/0042-trapping-rain-water/) | Hard |
 | [0739-daily-temperatures](https://github.com/MrinankGaur/LeetCode/tree/main/0739-daily-temperatures/) | Medium |
+| [0853-car-fleet](https://github.com/MrinankGaur/LeetCode/tree/main/0853-car-fleet/) | Medium |
 | [0901-online-stock-span](https://github.com/MrinankGaur/LeetCode/tree/main/0901-online-stock-span/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
