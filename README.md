@@ -214,6 +214,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0042-trapping-rain-water](https://github.com/MrinankGaur/LeetCode/tree/main/0042-trapping-rain-water/) | Hard |
 | [0094-binary-tree-inorder-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0094-binary-tree-inorder-traversal/) | Easy |
+| [0143-reorder-list](https://github.com/MrinankGaur/LeetCode/tree/main/0143-reorder-list/) | Medium |
 | [0144-binary-tree-preorder-traversal](https://github.com/MrinankGaur/LeetCode/tree/main/0144-binary-tree-preorder-traversal/) | Easy |
 | [0150-evaluate-reverse-polish-notation](https://github.com/MrinankGaur/LeetCode/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0155-min-stack](https://github.com/MrinankGaur/LeetCode/tree/main/0155-min-stack/) | Medium |
@@ -326,12 +327,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Linked List
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0143-reorder-list](https://github.com/MrinankGaur/LeetCode/tree/main/0143-reorder-list/) | Medium |
 | [0206-reverse-linked-list](https://github.com/MrinankGaur/LeetCode/tree/main/0206-reverse-linked-list/) | Easy |
 | [0705-design-hashset](https://github.com/MrinankGaur/LeetCode/tree/main/0705-design-hashset/) | Easy |
 | [0706-design-hashmap](https://github.com/MrinankGaur/LeetCode/tree/main/0706-design-hashmap/) | Easy |
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0143-reorder-list](https://github.com/MrinankGaur/LeetCode/tree/main/0143-reorder-list/) | Medium |
 | [0206-reverse-linked-list](https://github.com/MrinankGaur/LeetCode/tree/main/0206-reverse-linked-list/) | Easy |
 ## Simulation
 | Problem Name | Difficulty |
@@ -374,6 +377,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0042-trapping-rain-water](https://github.com/MrinankGaur/LeetCode/tree/main/0042-trapping-rain-water/) | Hard |
 | [0088-merge-sorted-array](https://github.com/MrinankGaur/LeetCode/tree/main/0088-merge-sorted-array/) | Easy |
 | [0125-valid-palindrome](https://github.com/MrinankGaur/LeetCode/tree/main/0125-valid-palindrome/) | Easy |
+| [0143-reorder-list](https://github.com/MrinankGaur/LeetCode/tree/main/0143-reorder-list/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/MrinankGaur/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0189-rotate-array](https://github.com/MrinankGaur/LeetCode/tree/main/0189-rotate-array/) | Medium |
 | [0567-permutation-in-string](https://github.com/MrinankGaur/LeetCode/tree/main/0567-permutation-in-string/) | Medium |
