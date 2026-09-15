@@ -8,29 +8,47 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
 class Solution {
-    static int[] arr = new int[1000000];
     public void reorderList(ListNode head) {
-        int n = 0;
-        ListNode temp = head;
-        while(temp!=null){
-            arr[n++]=temp.val;
-            temp=temp.next;
+        if (head == null || head.next == null) {
+            return;
         }
-        ListNode x = head;
-        int i = 1;
-        int j = n-1;
-        for(int k = 1;k<n;k++){
-            if(k%2==0){
-                ListNode y = new ListNode(arr[i++]);
-                x.next = y;
-                x = x.next;
-            }
-            else{
-                ListNode y = new ListNode(arr[j--]);
-                x.next = y;
-                x = x.next;
-            }
+        // finding mid point
+        ListNode mid = head;
+        ListNode fast = head;
+        while(fast!=null && fast.next!=null){
+            mid = mid.next;
+            fast = fast.next.next;
         }
+        //breadking list into 2 lists at the midpoint
+        ListNode second = mid.next;
+        mid.next = null;
+        
+        //reversing second list;
+        ListNode prev = null;
+        while(second!=null){
+            ListNode next = second.next;
+            second.next = prev;
+            prev = second;
+            second = next;
+        }
+
+        //merging the two lists
+
+        second = prev;
+        ListNode first = head;
+
+        while (second != null) {
+            ListNode next1 = first.next;
+            ListNode next2 = second.next;
+
+            first.next = second;
+            second.next = next1;
+
+            first = next1;
+            second = next2;
+        }
+
     }
 }
