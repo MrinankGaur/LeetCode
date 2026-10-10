@@ -13,6 +13,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0041-first-missing-positive](https://github.com/MrinankGaur/LeetCode/tree/main/0041-first-missing-positive/) | Hard |
 | [0042-trapping-rain-water](https://github.com/MrinankGaur/LeetCode/tree/main/0042-trapping-rain-water/) | Hard |
 | [0049-group-anagrams](https://github.com/MrinankGaur/LeetCode/tree/main/0049-group-anagrams/) | Medium |
+| [0064-minimum-path-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0064-minimum-path-sum/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/MrinankGaur/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0088-merge-sorted-array](https://github.com/MrinankGaur/LeetCode/tree/main/0088-merge-sorted-array/) | Easy |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/MrinankGaur/LeetCode/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
@@ -77,6 +78,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0036-valid-sudoku](https://github.com/MrinankGaur/LeetCode/tree/main/0036-valid-sudoku/) | Medium |
+| [0064-minimum-path-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0064-minimum-path-sum/) | Medium |
 | [0073-set-matrix-zeroes](https://github.com/MrinankGaur/LeetCode/tree/main/0073-set-matrix-zeroes/) | Medium |
 | [0130-surrounded-regions](https://github.com/MrinankGaur/LeetCode/tree/main/0130-surrounded-regions/) | Medium |
 | [0200-number-of-islands](https://github.com/MrinankGaur/LeetCode/tree/main/0200-number-of-islands/) | Medium |
@@ -156,6 +158,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0042-trapping-rain-water](https://github.com/MrinankGaur/LeetCode/tree/main/0042-trapping-rain-water/) | Hard |
+| [0064-minimum-path-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0064-minimum-path-sum/) | Medium |
 | [0070-climbing-stairs](https://github.com/MrinankGaur/LeetCode/tree/main/0070-climbing-stairs/) | Easy |
 | [0091-decode-ways](https://github.com/MrinankGaur/LeetCode/tree/main/0091-decode-ways/) | Medium |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/MrinankGaur/LeetCode/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
