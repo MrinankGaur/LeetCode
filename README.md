@@ -39,6 +39,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0417-pacific-atlantic-water-flow](https://github.com/MrinankGaur/LeetCode/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
 | [0463-island-perimeter](https://github.com/MrinankGaur/LeetCode/tree/main/0463-island-perimeter/) | Easy |
 | [0494-target-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0494-target-sum/) | Medium |
+| [0495-teemo-attacking](https://github.com/MrinankGaur/LeetCode/tree/main/0495-teemo-attacking/) | Easy |
 | [0560-subarray-sum-equals-k](https://github.com/MrinankGaur/LeetCode/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0621-task-scheduler](https://github.com/MrinankGaur/LeetCode/tree/main/0621-task-scheduler/) | Medium |
 | [0622-design-circular-queue](https://github.com/MrinankGaur/LeetCode/tree/main/0622-design-circular-queue/) | Medium |
@@ -364,6 +365,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0495-teemo-attacking](https://github.com/MrinankGaur/LeetCode/tree/main/0495-teemo-attacking/) | Easy |
 | [0735-asteroid-collision](https://github.com/MrinankGaur/LeetCode/tree/main/0735-asteroid-collision/) | Medium |
 | [1929-concatenation-of-array](https://github.com/MrinankGaur/LeetCode/tree/main/1929-concatenation-of-array/) | Easy |
 ## Trie
