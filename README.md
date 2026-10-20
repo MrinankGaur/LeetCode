@@ -166,6 +166,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0063-unique-paths-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0063-unique-paths-ii/) | Medium |
 | [0064-minimum-path-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0064-minimum-path-sum/) | Medium |
 | [0070-climbing-stairs](https://github.com/MrinankGaur/LeetCode/tree/main/0070-climbing-stairs/) | Easy |
+| [0072-edit-distance](https://github.com/MrinankGaur/LeetCode/tree/main/0072-edit-distance/) | Medium |
 | [0091-decode-ways](https://github.com/MrinankGaur/LeetCode/tree/main/0091-decode-ways/) | Medium |
 | [0115-distinct-subsequences](https://github.com/MrinankGaur/LeetCode/tree/main/0115-distinct-subsequences/) | Hard |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/MrinankGaur/LeetCode/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
@@ -324,6 +325,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0014-longest-common-prefix](https://github.com/MrinankGaur/LeetCode/tree/main/0014-longest-common-prefix/) | Easy |
 | [0049-group-anagrams](https://github.com/MrinankGaur/LeetCode/tree/main/0049-group-anagrams/) | Medium |
 | [0071-simplify-path](https://github.com/MrinankGaur/LeetCode/tree/main/0071-simplify-path/) | Medium |
+| [0072-edit-distance](https://github.com/MrinankGaur/LeetCode/tree/main/0072-edit-distance/) | Medium |
 | [0091-decode-ways](https://github.com/MrinankGaur/LeetCode/tree/main/0091-decode-ways/) | Medium |
 | [0115-distinct-subsequences](https://github.com/MrinankGaur/LeetCode/tree/main/0115-distinct-subsequences/) | Hard |
 | [0125-valid-palindrome](https://github.com/MrinankGaur/LeetCode/tree/main/0125-valid-palindrome/) | Easy |
