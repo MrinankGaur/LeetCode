@@ -1,38 +1,29 @@
 class Solution {
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        if(!wordList.contains(endWord)) return 0;
+
         Set<String> set = new HashSet<>(wordList);
-        if(!set.contains(endWord)) return 0;
-        Queue<Pair> q = new LinkedList<>();
-        q.offer(new Pair(beginWord, 1));
+        int res = 0;
+        Queue<String> q = new LinkedList<>();
+        q.offer(beginWord);
+
         while(!q.isEmpty()){
-            Pair curr =  q.poll();
-            String word = curr.str;
-            int step = curr.step;
-            if(word.equals(endWord)) return step;
-            char[] arr = word.toCharArray();
-            for(int i = 0;i<arr.length;i++){
-                char w = arr[i];
-                for(char ch = 'a';ch <= 'z'; ch++){
-                    if(ch==w) continue;
-                    arr[i] = ch;
-                    String newWord = new String(arr);
-                    if(set.contains(newWord)){
-                        set.remove(newWord);
-                        q.offer(new Pair(newWord,step+1));
+            res++;
+            for(int i = q.size();i>0;i--){
+                String node = q.poll();
+                if(node.equals(endWord)) return res;
+                for(int j = 0;j<node.length();j++){
+                    for(char c = 'a'; c<='z';c++){
+                        if(c==node.charAt(j)) continue;
+                        String nei = node.substring(0,j) + c + node.substring(j+1);
+                        if(set.contains(nei)){
+                            q.offer(nei);
+                            set.remove(nei);
+                        }
                     }
                 }
-                arr[i] = w;
             }
         }
         return 0;
-    }
-
-    public class Pair{
-        String str;
-        int step;
-        public Pair(String str, int step){
-            this.str = str;
-            this.step = step;
-        }
     }
 }
