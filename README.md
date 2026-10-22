@@ -466,4 +466,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0127-word-ladder](https://github.com/MrinankGaur/LeetCode/tree/main/0127-word-ladder/) | Hard |
+## Dijkstra's Algorithm
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0743-network-delay-time](https://github.com/MrinankGaur/LeetCode/tree/main/0743-network-delay-time/) | Medium |
 <!---LeetCode Topics End-->
