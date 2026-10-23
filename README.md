@@ -37,6 +37,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0322-coin-change](https://github.com/MrinankGaur/LeetCode/tree/main/0322-coin-change/) | Medium |
 | [0332-reconstruct-itinerary](https://github.com/MrinankGaur/LeetCode/tree/main/0332-reconstruct-itinerary/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/MrinankGaur/LeetCode/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0410-split-array-largest-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0417-pacific-atlantic-water-flow](https://github.com/MrinankGaur/LeetCode/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
 | [0463-island-perimeter](https://github.com/MrinankGaur/LeetCode/tree/main/0463-island-perimeter/) | Easy |
 | [0494-target-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0494-target-sum/) | Medium |
@@ -177,6 +178,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
 | [0213-house-robber-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0213-house-robber-ii/) | Medium |
 | [0322-coin-change](https://github.com/MrinankGaur/LeetCode/tree/main/0322-coin-change/) | Medium |
+| [0410-split-array-largest-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0494-target-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0494-target-sum/) | Medium |
 | [0509-fibonacci-number](https://github.com/MrinankGaur/LeetCode/tree/main/0509-fibonacci-number/) | Easy |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/MrinankGaur/LeetCode/tree/main/1976-number-of-ways-to-arrive-at-destination/) | Medium |
@@ -283,6 +285,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0209-minimum-size-subarray-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/MrinankGaur/LeetCode/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/MrinankGaur/LeetCode/tree/main/0235-lowest-common-ancestor-of-a-binary-search-tree/) | Medium |
+| [0410-split-array-largest-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0450-delete-node-in-a-bst](https://github.com/MrinankGaur/LeetCode/tree/main/0450-delete-node-in-a-bst/) | Medium |
 | [0701-insert-into-a-binary-search-tree](https://github.com/MrinankGaur/LeetCode/tree/main/0701-insert-into-a-binary-search-tree/) | Medium |
 | [0703-kth-largest-element-in-a-stream](https://github.com/MrinankGaur/LeetCode/tree/main/0703-kth-largest-element-in-a-stream/) | Easy |
@@ -351,6 +354,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- | ------- |
 | [0011-container-with-most-water](https://github.com/MrinankGaur/LeetCode/tree/main/0011-container-with-most-water/) | Medium |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
+| [0410-split-array-largest-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0621-task-scheduler](https://github.com/MrinankGaur/LeetCode/tree/main/0621-task-scheduler/) | Medium |
 | [0680-valid-palindrome-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0680-valid-palindrome-ii/) | Easy |
 | [0881-boats-to-save-people](https://github.com/MrinankGaur/LeetCode/tree/main/0881-boats-to-save-people/) | Medium |
@@ -405,6 +409,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0209-minimum-size-subarray-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0238-product-of-array-except-self](https://github.com/MrinankGaur/LeetCode/tree/main/0238-product-of-array-except-self/) | Medium |
 | [0304-range-sum-query-2d-immutable](https://github.com/MrinankGaur/LeetCode/tree/main/0304-range-sum-query-2d-immutable/) | Medium |
+| [0410-split-array-largest-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0560-subarray-sum-equals-k](https://github.com/MrinankGaur/LeetCode/tree/main/0560-subarray-sum-equals-k/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
