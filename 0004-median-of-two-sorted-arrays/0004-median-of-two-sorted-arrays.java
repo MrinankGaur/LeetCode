@@ -4,15 +4,21 @@ class Solution {
         int m = nums2.length;
         int[] arr = new int[n+m];
         int k = 0;
-        for(int i = 0;i<n;i++){
-            arr[k++] = nums1[i];
+        int i = 0;
+        int j = 0;
+        while(i<n && j<m){
+            if(nums1[i]<nums2[j]){
+                arr[k++] = nums1[i++];
+            }else{
+                arr[k++] = nums2[j++];
+            }
         }
-        for(int i = 0;i<m;i++){
-            arr[k++] = nums2[i];
+        while(i<n){
+            arr[k++] = nums1[i++];
         }
-
-        Arrays.sort(arr);
-
+        while(j<m){
+            arr[k++] = nums2[j++];
+        }
         int total = arr.length;
         if(total%2==1){
             return (double) arr[total/2];
