@@ -2,18 +2,17 @@ class Solution {
     public int splitArray(int[] nums, int k) {
         int n = nums.length;
         if(k>n) return -1;
-        int low = 0;
-        int high = 0;
+
+        int low = 0, high = 0;
         for(int num:nums){
             low = Math.max(low,num);
             high += num;
         }
-
         int ans = -1;
         while(low<=high){
             int mid = low + (high-low)/2;
-            int limit = count(nums,mid);
-            if(limit<=k){
+            int x = helper(nums,mid);
+            if(x<=k){
                 ans = mid;
                 high = mid-1;
             }else{
@@ -22,15 +21,15 @@ class Solution {
         }
         return ans;
     }
-    public int count(int[] nums, int limit){
+    private int helper(int[] nums,int limit){
         int res = 1;
         int sum = 0;
-        for(int num:nums){
+        for(int num: nums){
             if(sum+num<=limit){
                 sum+=num;
             }else{
                 res++;
-                sum = num;
+                sum=num;
             }
         }
         return res;
