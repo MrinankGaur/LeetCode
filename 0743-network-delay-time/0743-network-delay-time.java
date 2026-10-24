@@ -23,12 +23,13 @@ class Solution {
         //         }
         //     }
 
-        int max = Integer.MIN_VALUE;
-        for(int i = 1;i<=n;i++){
-            max = Math.max(max,dist[i]);
+        int max = 0;
+        for (int i = 1; i <= n; i++) {
+            if (dist[i] == INF) {
+                return -1;
+            }
+            max = Math.max(max, dist[i]);
         }
-        return max == INF ? -1:max;
-
-
+        return max;
     }
 }
