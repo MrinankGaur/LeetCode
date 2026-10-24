@@ -26,10 +26,10 @@ class Solution {
             return dp[i][j] = helper(i+1, j+1);
         }
 
-        int insert = helper(i, j+1);
-        int delete = helper(i+1, j);
-        int replace = helper(i+1, j+1);
+        int insert = 1+helper(i, j+1);
+        int delete = 1+helper(i+1, j);
+        int replace = 1+helper(i+1, j+1);
 
-        return dp[i][j] = 1 + Math.min(insert, Math.min(delete, replace));
+        return dp[i][j] =Math.min(insert, Math.min(delete, replace));
     }
 }
