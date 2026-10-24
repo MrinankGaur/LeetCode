@@ -181,6 +181,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0410-split-array-largest-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0410-split-array-largest-sum/) | Hard |
 | [0494-target-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0494-target-sum/) | Medium |
 | [0509-fibonacci-number](https://github.com/MrinankGaur/LeetCode/tree/main/0509-fibonacci-number/) | Easy |
+| [1143-longest-common-subsequence](https://github.com/MrinankGaur/LeetCode/tree/main/1143-longest-common-subsequence/) | Medium |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/MrinankGaur/LeetCode/tree/main/1976-number-of-ways-to-arrive-at-destination/) | Medium |
 ## Topological Sort
 | Problem Name | Difficulty |
@@ -344,6 +345,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0567-permutation-in-string](https://github.com/MrinankGaur/LeetCode/tree/main/0567-permutation-in-string/) | Medium |
 | [0680-valid-palindrome-ii](https://github.com/MrinankGaur/LeetCode/tree/main/0680-valid-palindrome-ii/) | Easy |
 | [0752-open-the-lock](https://github.com/MrinankGaur/LeetCode/tree/main/0752-open-the-lock/) | Medium |
+| [1143-longest-common-subsequence](https://github.com/MrinankGaur/LeetCode/tree/main/1143-longest-common-subsequence/) | Medium |
 | [1768-merge-strings-alternately](https://github.com/MrinankGaur/LeetCode/tree/main/1768-merge-strings-alternately/) | Easy |
 ## Eulerian Circuit
 | Problem Name | Difficulty |
@@ -483,4 +485,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0322-coin-change](https://github.com/MrinankGaur/LeetCode/tree/main/0322-coin-change/) | Medium |
+## Longest Common Subsequence
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1143-longest-common-subsequence](https://github.com/MrinankGaur/LeetCode/tree/main/1143-longest-common-subsequence/) | Medium |
 <!---LeetCode Topics End-->
