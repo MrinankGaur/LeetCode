@@ -6,6 +6,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0004-median-of-two-sorted-arrays](https://github.com/MrinankGaur/LeetCode/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
 | [0011-container-with-most-water](https://github.com/MrinankGaur/LeetCode/tree/main/0011-container-with-most-water/) | Medium |
 | [0014-longest-common-prefix](https://github.com/MrinankGaur/LeetCode/tree/main/0014-longest-common-prefix/) | Easy |
 | [0015-3sum](https://github.com/MrinankGaur/LeetCode/tree/main/0015-3sum/) | Medium |
@@ -195,6 +196,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0004-median-of-two-sorted-arrays](https://github.com/MrinankGaur/LeetCode/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
 | [0169-majority-element](https://github.com/MrinankGaur/LeetCode/tree/main/0169-majority-element/) | Easy |
 | [0191-number-of-1-bits](https://github.com/MrinankGaur/LeetCode/tree/main/0191-number-of-1-bits/) | Easy |
 | [0215-kth-largest-element-in-an-array](https://github.com/MrinankGaur/LeetCode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
@@ -285,6 +287,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Binary Search Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0004-median-of-two-sorted-arrays](https://github.com/MrinankGaur/LeetCode/tree/main/0004-median-of-two-sorted-arrays/) | Hard |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/MrinankGaur/LeetCode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0209-minimum-size-subarray-sum](https://github.com/MrinankGaur/LeetCode/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0230-kth-smallest-element-in-a-bst](https://github.com/MrinankGaur/LeetCode/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
