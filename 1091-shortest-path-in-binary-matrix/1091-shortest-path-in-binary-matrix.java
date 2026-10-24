@@ -1,49 +1,54 @@
 class Solution {
+    private int[][] directions = {
+        {1, 0}, {-1, 0},
+        {0, 1}, {0, -1},
+        {1, 1}, {-1, -1},
+        {1, -1}, {-1, 1}
+    };
 
-    class Node {
-        int x, y;
+    public int shortestPathBinaryMatrix(int[][] grid) {
+        int n = grid.length;
 
-        Node(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
-
-    public int shortestPathBinaryMatrix(int[][] G) {
-        Queue<Node> Q = new ArrayDeque<>();
-        if (G[0][0] == 1) {
+        if (grid[0][0] == 1 || grid[n - 1][n - 1] == 1) {
             return -1;
         }
-        Q.add(new Node(0, 0));
-        int n = G.length;
-        if (n == 1) {
-            return 1;
-        }
-        boolean[][] V = new boolean[n][n];
-        V[0][0] = true;
 
-        int[][] D = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 }, { 1, 1 }, { 1, -1 }, { -1, -1 }, { -1, 1 } };
+        Queue<int[]> queue = new LinkedList<>();
+        queue.offer(new int[]{0, 0});
+        grid[0][0] = 2;
 
-        int moves = 1;
-        while (!Q.isEmpty()) {
-            int size = Q.size();
-            moves++;
-            for (int i = 0; i < size; i++) {
-                Node node = Q.poll();
-                int nx = node.x, ny = node.y;
+        int steps = 1;
 
-                for (int j = 0; j < D.length; j++) {
-                    int newx = nx + D[j][0], newy = ny + D[j][1];
-                    if (newx >= 0 && newy >= 0 && newx < n && newy < n && G[newx][newy] == 0 && !V[newx][newy]) {
-                        Q.add(new Node(newx, newy));
-                        V[newx][newy] = true;
-                        if (newx == n - 1 && newy == n - 1) {
-                            return moves;
-                        }
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int s = 0; s < size; s++) {
+                int[] curr = queue.poll();
+
+                int row = curr[0];
+                int col = curr[1];
+
+                if (row == n - 1 && col == n - 1) {
+                    return steps;
+                }
+
+                for (int[] dir : directions) {
+                    int nr = row + dir[0];
+                    int nc = col + dir[1];
+
+                    if (nr >= 0 && nr < n &&
+                        nc >= 0 && nc < n &&
+                        grid[nr][nc] == 0 &&
+                        grid[nr][nc]!=2) {
+
+                        queue.offer(new int[]{nr, nc});
+                        grid[nr][nc] = 2;
                     }
                 }
             }
+
+            steps++;
         }
+
         return -1;
     }
 }
